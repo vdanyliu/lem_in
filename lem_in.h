@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/07 19:31:39 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/16 17:51:12 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void				lm_add(char *gnl, t_lem *lem, int mod);
 void				lm_parce_ants(char *gnl, long *ant_num);
 int					all_is_num(char *str);
 void				lm_parce_rooms(char *gnl, t_lem *lem);
+void				lm_parce_link(char *str, t_lem *lem);
 void				lm_free_split(char **str);
+t_room				*lm_last_room(t_lem *lem);
 
 #endif

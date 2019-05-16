@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lem_in.dir/lm_create_lem.c.o"
   "CMakeFiles/Lem_in.dir/lm_error.c.o"
+  "CMakeFiles/Lem_in.dir/lm_parcer_links.c.o"
   "CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o"
   "CMakeFiles/Lem_in.dir/lm_usefull.c.o"
   "CMakeFiles/Lem_in.dir/main.c.o"

@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 19:01:17 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/07 19:31:39 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/16 18:53:13 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,7 @@ static void		check_same(t_room *buff, t_room *room)
 	char *str2;
 	if (buff->x == room->x && buff->y == room->y)
 		lm_error(67);
-	str1 = buff->name;
-	str2 = room->name;
-	while (*str1 == *str2)
-	{
-		str1++;
-		str2++;
-	}
-	if (!*str1 && !*str2)
+	if (ft_strcmp(buff->name, room->name) == 0)
 		lm_error(67);
 }
 
@@ -33,6 +26,7 @@ static void		lm_add_room_list(t_room *room, t_lem *lem)
 {
 	static int	i = 0;
 	t_room *buff;
+
 	if (lem->rooms == NULL)
 	{
 		lem->rooms = room;

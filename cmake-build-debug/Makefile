@@ -2296,6 +2296,33 @@ lm_error.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_error.c.s
 .PHONY : lm_error.c.s
 
+lm_parcer_links.o: lm_parcer_links.c.o
+
+.PHONY : lm_parcer_links.o
+
+# target to build an object file
+lm_parcer_links.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_parcer_links.c.o
+.PHONY : lm_parcer_links.c.o
+
+lm_parcer_links.i: lm_parcer_links.c.i
+
+.PHONY : lm_parcer_links.i
+
+# target to preprocess a source file
+lm_parcer_links.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_parcer_links.c.i
+.PHONY : lm_parcer_links.c.i
+
+lm_parcer_links.s: lm_parcer_links.c.s
+
+.PHONY : lm_parcer_links.s
+
+# target to generate assembly for a file
+lm_parcer_links.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_parcer_links.c.s
+.PHONY : lm_parcer_links.c.s
+
 lm_parcer_rooms.o: lm_parcer_rooms.c.o
 
 .PHONY : lm_parcer_rooms.o
@@ -2627,6 +2654,9 @@ help:
 	@echo "... lm_error.o"
 	@echo "... lm_error.i"
 	@echo "... lm_error.s"
+	@echo "... lm_parcer_links.o"
+	@echo "... lm_parcer_links.i"
+	@echo "... lm_parcer_links.s"
 	@echo "... lm_parcer_rooms.o"
 	@echo "... lm_parcer_rooms.i"
 	@echo "... lm_parcer_rooms.s"

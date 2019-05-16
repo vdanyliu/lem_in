@@ -11,6 +11,16 @@ CMakeFiles/Lem_in.dir/lm_error.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_error.c.o: ../libft/src/libft.h
 CMakeFiles/Lem_in.dir/lm_error.c.o: ../lm_error.c
 
+CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../lem_in.h
+CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../libft/src/ft_printf.h
+CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../libft/src/libft.h
+CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../lm_parcer_links.c
+
+CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: ../lem_in.h
+CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: ../libft/src/ft_printf.h
+CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: ../libft/src/libft.h
+CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: ../lm_parcer_rooms.c
+
 CMakeFiles/Lem_in.dir/lm_usefull.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_usefull.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_usefull.c.o: ../libft/src/libft.h

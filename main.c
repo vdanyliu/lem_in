@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 13:57:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/07 19:31:39 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/16 18:29:44 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,25 @@ void			lm_add(char *gnl, t_lem *lem, int mod)
 static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 {
 	if (ft_strstr(gnl, "##start") && ft_strlen(gnl) == ft_strlen("##start"))
-		//add_start;
-		;
+	{
+		if (lem->start != NULL)
+			lm_error(66);
+		ft_printf("%s\n", gnl);
+		free(gnl);
+		get_next_line(g_fd, &gnl);
+		lm_add(gnl, lem, 0);
+		lem->start = lm_last_room(lem);
+	}
 	else if (ft_strstr(gnl, "##end") && ft_strlen(gnl) == ft_strlen("##end"))
-		//add_end
-		;
+	{
+		if (lem->finish != NULL)
+			lm_error(66);
+		ft_printf("%s\n", gnl);
+		free(gnl);
+		get_next_line(g_fd, &gnl);
+		lm_add(gnl, lem, 0);
+		lem->finish = lm_last_room(lem);
+	}
 	else
 		ft_printf("%s\n", gnl);
 	free(gnl);
@@ -65,9 +79,14 @@ static void 	lm_parcer(t_lem *lem)
 		if(*gnl == '#')
 			lm_hesh_parcer(gnl, lem);
 		else
+		{
 			lm_add(gnl, lem, 0);   // 3 мод
-		free(gnl);
+			free(gnl);
+		}
 	}
+	if (!lem->start || !lem->finish)
+		lm_error(11);
+	ft_printf("END OF PARCER\n");
 }
 
 static void		lm_initiation(t_lem **lem_in)
@@ -80,7 +99,7 @@ int				main(void)
 {
 	t_lem	*lem_in;
 
-	g_fd = open("../test", O_RDONLY);
+	g_fd = 0;
 	lem_in = NULL;
 	lm_initiation(&lem_in);
 	return (0);

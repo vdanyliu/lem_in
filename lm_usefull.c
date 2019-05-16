@@ -36,3 +36,15 @@ void	lm_free_split(char **str)
 	}
 	free(buff);
 }
+
+t_room				*lm_last_room(t_lem *lem)
+{
+	t_room	*last;
+
+	last = lem->rooms;
+	if (!last)
+		lm_error(10);
+	while (last->next)
+		last = last->next;
+	return (last);
+}
