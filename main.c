@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/30 13:57:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/16 18:29:44 by vdanyliu         ###   ########.fr       */
+/*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
+/*   Updated: 2019/05/22 19:19:10 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,15 @@ static void 	lm_parcer(t_lem *lem)
 	char	*gnl;
 
 	while(get_next_line(g_fd, &gnl) > 0)
-	{
 		if (*gnl == 0 || *gnl == 'L')
 			lm_error(0);
-		if(*gnl == '#')
+		else if (*gnl == '#')
 			lm_hesh_parcer(gnl, lem);
 		else
 		{
 			lm_add(gnl, lem, 0);   // 3 мод
 			free(gnl);
 		}
-	}
 	if (!lem->start || !lem->finish)
 		lm_error(11);
 	ft_printf("END OF PARCER\n");

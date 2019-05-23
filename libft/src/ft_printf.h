@@ -59,7 +59,7 @@ typedef struct			s_float
 }						t_float;
 
 int						ft_printf(const char *format, ...);
-int						g_len;
+static int				g_len;
 void					pf_type_initiation(t_type **head, char *format);
 t_type					*pf_create_type_lst();
 void					pf_type_deafult_flags(t_type *buff, char *str);

@@ -28,7 +28,7 @@ char		*ft_itoa(int n)
 
 	i = 0;
 	nb = n;
-	if (!(str = ft_strnew(ft_charcount(n))))
+	if (!(str = ft_strnew((size_t)ft_charcount(n))))
 		return (0);
 	buf = str;
 	if (n < 0)

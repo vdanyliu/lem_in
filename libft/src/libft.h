@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 12:35:16 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/04/11 14:27:33 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:29:18 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <sys/types.h>
 # include "ft_printf.h"
 
-# define BUFF_SIZE 1
+# define BUFF_SIZE 20
 
 typedef struct		s_gnl
 {

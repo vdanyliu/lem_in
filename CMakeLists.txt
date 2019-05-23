@@ -18,7 +18,9 @@ add_executable(Lem_in
 
 target_link_libraries(Lem_in ft)
 #set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Werror -fsanitize=address -g -fno-omit-frame-pointer")
-set(GCC_COVERAGE_COMPILE_FLAGS "-fsanitize=address -g -fno-omit-frame-pointer")
+#set(GCC_COVERAGE_COMPILE_FLAGS "-fsanitize=address -g -fno-omit-frame-pointer")
+#set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Werror")
+#set(GCC_COVERAGE_COMPILE_FLAGS "-Ofast")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
 #target_link_libraries(Lem_in -lmlx "-framework OpenGL" "-framework AppKit")
 

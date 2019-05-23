@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 19:01:17 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/16 18:53:13 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/22 15:14:30 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 static void		check_same(t_room *buff, t_room *room)
 {
-	char *str1;
-	char *str2;
 	if (buff->x == room->x && buff->y == room->y)
 		lm_error(67);
 	if (ft_strcmp(buff->name, room->name) == 0)
@@ -42,20 +40,37 @@ static void		lm_add_room_list(t_room *room, t_lem *lem)
 		}
 		check_same(buff, room);
 		buff->next = room;
-		room->num = i;
+		room->num = i++;
 	}
 }
+
+//static void		*lm_create_room(char *name, char *x, char *y)
+//{
+//	t_room	*room;
+//
+//	room = (t_room*)malloc(sizeof(t_room));
+//	room->x = ft_atoi(x);
+//	room->y = ft_atoi(y);
+//	room->name = ft_strdup(name);
+//	room->next = NULL;
+//	room->link = NULL;
+//	return (room);
+//}
 
 static void		*lm_create_room(char *name, char *x, char *y)
 {
 	t_room	*room;
 
-	room = (t_room*)malloc(sizeof(t_room));
-	room->x = ft_atoi(x);
-	room->y = ft_atoi(y);
-	room->name = ft_strdup(name);
-	room->next = NULL;
-	room->link = NULL;
+	if(!(room = (typeof(room))malloc(sizeof(*room))))
+	{
+		lm_error(66);
+		return (NULL);
+	}
+	*room = (typeof(*room)){
+		.x = ft_atoi(x),
+		.y = ft_atoi(y),
+		.name = ft_strdup(name)
+	};
 	return (room);
 }
 
@@ -69,6 +84,7 @@ void			lm_parce_rooms(char *gnl, t_lem *lem)
 	{
 		lm_add(0, 0, 2);
 		lm_parce_link(gnl, lem);
+		lm_free_split(split);
 		return ;
 	}
 	if (!all_is_num(split[1]) || !all_is_num(split[2]))

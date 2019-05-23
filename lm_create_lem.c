@@ -6,20 +6,32 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 16:35:40 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/04/30 14:23:33 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:11:14 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
+//t_lem		*lm_create_lem(void)
+//{
+//	t_lem	*head;
+//
+//	head = (t_lem*)malloc(sizeof(t_lem));
+//	head->ants_numb = 0;
+//	head->start = NULL;
+//	head->finish = NULL;
+//	head->rooms = NULL;
+//	return (head);
+//}
+
+
+
 t_lem		*lm_create_lem(void)
 {
 	t_lem	*head;
 
-	head = (t_lem*)malloc(sizeof(t_lem));
-	head->ants_numb = 0;
-	head->start = NULL;
-	head->finish = NULL;
-	head->rooms = NULL;
+	if (!(head = (typeof(head))malloc(sizeof(*head))))
+		return (NULL);
+	*head = (typeof(*head)){ 0, 0, 0 ,0 };
 	return (head);
 }
