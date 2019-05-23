@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 14:49:56 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/04/03 14:49:58 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/23 14:06:44 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include <stdarg.h>
+# include <stdint.h>
 
 typedef struct			s_flag
 {

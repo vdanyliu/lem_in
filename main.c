@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/22 19:19:10 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/23 18:17:54 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ void			lm_add(char *gnl, t_lem *lem, int mod)
 		lm_parce_rooms(gnl, lem);
 	else
 		lm_parce_link(gnl, lem);
-	ft_printf("%s\n", gnl);
+//	ft_printf("%s\n", gnl);
+	lm_add_gnl(lem->gnl, gnl);
 }
 
 static void		lm_hesh_parcer(char *gnl, t_lem *lem)
@@ -47,9 +48,10 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 	{
 		if (lem->start != NULL)
 			lm_error(66);
-		ft_printf("%s\n", gnl);
-		free(gnl);
-		get_next_line(g_fd, &gnl);
+		//ft_printf("%s\n", gnl);
+		//free(gnl);
+		lm_add_gnl(lem->gnl, gnl);
+		get_next_line(0, &gnl);
 		lm_add(gnl, lem, 0);
 		lem->start = lm_last_room(lem);
 	}
@@ -57,22 +59,26 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 	{
 		if (lem->finish != NULL)
 			lm_error(66);
-		ft_printf("%s\n", gnl);
-		free(gnl);
-		get_next_line(g_fd, &gnl);
+//		ft_printf("%s\n", gnl);
+//		free(gnl);
+		lm_add_gnl(lem->gnl, gnl);
+		get_next_line(0, &gnl);
 		lm_add(gnl, lem, 0);
 		lem->finish = lm_last_room(lem);
 	}
 	else
-		ft_printf("%s\n", gnl);
-	free(gnl);
+		lm_add_gnl(lem->gnl, gnl);
+//		ft_printf("%s\n", gnl);
+	//free(gnl);
 }
 
 static void 	lm_parcer(t_lem *lem)
 {
 	char	*gnl;
 
-	while(get_next_line(g_fd, &gnl) > 0)
+	while(get_next_line(0, &gnl) > 0)
+	{
+
 		if (*gnl == 0 || *gnl == 'L')
 			lm_error(0);
 		else if (*gnl == '#')
@@ -80,25 +86,50 @@ static void 	lm_parcer(t_lem *lem)
 		else
 		{
 			lm_add(gnl, lem, 0);   // 3 мод
-			free(gnl);
+//			free(gnl);
 		}
+	}
 	if (!lem->start || !lem->finish)
 		lm_error(11);
-	ft_printf("END OF PARCER\n");
+	free(gnl);
+	ft_printf("|%s|END OF PARCER\n", gnl);
+
+}
+
+//debug
+void			lm_print_links(t_lem *lem)
+{
+	t_room	*room;
+	t_lroom	*link;
+
+	room = lem->rooms;
+	while(room)
+	{
+		link = room->link;
+		ft_printf("num = %i, name = %s links :\n", room->num, room->name);
+		while(link->next)
+		{
+			ft_printf("|num = %i, name = %s| ", link->room->num, link->room->name);
+			link = link->next;
+		}
+		ft_printf("|num = %i, name = %s|\n", link->room->num, link->room->name);
+		room = room->next;
+	}
 }
 
 static void		lm_initiation(t_lem **lem_in)
 {
 	*lem_in = lm_create_lem();
 	lm_parcer(*lem_in);
+	lm_print_gnl((*lem_in)->gnl);
 }
 
 int				main(void)
 {
 	t_lem	*lem_in;
 
-	g_fd = 0;
 	lem_in = NULL;
 	lm_initiation(&lem_in);
+	lm_print_links(lem_in); //debug
 	return (0);
 }

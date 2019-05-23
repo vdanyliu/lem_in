@@ -136,6 +136,33 @@ ft/fast:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
+gnl_manager.o: gnl_manager.c.o
+
+.PHONY : gnl_manager.o
+
+# target to build an object file
+gnl_manager.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/gnl_manager.c.o
+.PHONY : gnl_manager.c.o
+
+gnl_manager.i: gnl_manager.c.i
+
+.PHONY : gnl_manager.i
+
+# target to preprocess a source file
+gnl_manager.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/gnl_manager.c.i
+.PHONY : gnl_manager.c.i
+
+gnl_manager.s: gnl_manager.c.s
+
+.PHONY : gnl_manager.s
+
+# target to generate assembly for a file
+gnl_manager.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/gnl_manager.c.s
+.PHONY : gnl_manager.c.s
+
 libft/src/ft_atoi.o: libft/src/ft_atoi.c.o
 
 .PHONY : libft/src/ft_atoi.o
@@ -2414,6 +2441,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... Lem_in"
 	@echo "... ft"
+	@echo "... gnl_manager.o"
+	@echo "... gnl_manager.i"
+	@echo "... gnl_manager.s"
 	@echo "... libft/src/ft_atoi.o"
 	@echo "... libft/src/ft_atoi.i"
 	@echo "... libft/src/ft_atoi.s"

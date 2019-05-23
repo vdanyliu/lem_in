@@ -15,6 +15,8 @@ libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
 stdarg.h
 -
+stdint.h
+-
 
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
 fcntl.h
@@ -33,26 +35,6 @@ sys/types.h
 -
 ft_printf.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_printf.h
-
-/Users/vdanyliu/Desktop/lem_in/lm_create_lem.c
-lem_in.h
-/Users/vdanyliu/Desktop/lem_in/lem_in.h
-
-/Users/vdanyliu/Desktop/lem_in/lm_error.c
-lem_in.h
-/Users/vdanyliu/Desktop/lem_in/lem_in.h
-
-/Users/vdanyliu/Desktop/lem_in/lm_parcer_links.c
-lem_in.h
-/Users/vdanyliu/Desktop/lem_in/lem_in.h
-
-/Users/vdanyliu/Desktop/lem_in/lm_parcer_rooms.c
-lem_in.h
-/Users/vdanyliu/Desktop/lem_in/lem_in.h
-
-/Users/vdanyliu/Desktop/lem_in/lm_usefull.c
-lem_in.h
-/Users/vdanyliu/Desktop/lem_in/lem_in.h
 
 /Users/vdanyliu/Desktop/lem_in/main.c
 lem_in.h

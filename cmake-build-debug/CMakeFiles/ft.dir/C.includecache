@@ -91,6 +91,8 @@ libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
 stdarg.h
 -
+stdint.h
+-
 
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_putchar.c
 libft.h

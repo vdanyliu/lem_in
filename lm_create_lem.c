@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 16:35:40 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/22 14:11:14 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/23 15:24:33 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ t_lem		*lm_create_lem(void)
 
 	if (!(head = (typeof(head))malloc(sizeof(*head))))
 		return (NULL);
-	*head = (typeof(*head)){ 0, 0, 0 ,0 };
+	*head = (typeof(*head)){ 0, 0, 0 ,0 ,0 };
+	head->gnl = (t_gnl_buff*)malloc(sizeof(t_gnl_buff));
+	head->gnl->gnl = 0;
+	head->gnl->next = NULL;
 	return (head);
 }

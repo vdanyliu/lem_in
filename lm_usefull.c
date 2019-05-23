@@ -14,6 +14,10 @@
 
 int 	all_is_num(char *str)
 {
+	if (*str == '-')
+		str++;
+	if (!*str)
+		return (0);
 	while (*str)
 	{
 		if (ft_isdigit(*str))

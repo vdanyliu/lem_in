@@ -122,6 +122,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/gnl_manager.c">
+			<Option target="Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lem_in.h">
 			<Option target="Lem_in"/>
 		</Unit>
