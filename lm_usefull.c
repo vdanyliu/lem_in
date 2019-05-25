@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 16:47:28 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/04/25 16:47:33 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/25 17:57:58 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,31 @@ t_room				*lm_last_room(t_lem *lem)
 	while (last->next)
 		last = last->next;
 	return (last);
+}
+
+t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr)
+{
+	t_bfs	*new;
+
+	new = (t_bfs*)malloc(sizeof(t_bfs));
+	new->parent = parent;
+	new->room = curr;
+	new->next = NULL;
+	new->pre = NULL;
+	return (new);
+}
+
+void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room, int i)
+{
+	static t_bfs *curr = NULL;
+
+	if (i == 1)
+	{
+		curr = NULL;
+		return ;
+	}
+	curr == NULL ? curr = head : 0;
+	curr->next = lm_new_bfs_list(from, room);
+	curr->next->pre = curr;
+	curr = curr->next;
 }

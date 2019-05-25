@@ -32,7 +32,7 @@ t_lem		*lm_create_lem(void)
 
 	if (!(head = (typeof(head))malloc(sizeof(*head))))
 		return (NULL);
-	*head = (typeof(*head)){ 0, 0, 0 ,0 ,0 };
+	*head = (typeof(*head)){ 0, 0, 0 ,0 ,0 ,0 };
 	head->gnl = (t_gnl_buff*)malloc(sizeof(t_gnl_buff));
 	head->gnl->gnl = 0;
 	head->gnl->next = NULL;

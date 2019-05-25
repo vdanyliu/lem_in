@@ -96,9 +96,22 @@ CMakeFiles/Lem_in.dir/lm_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lem_in.dir/lm_error.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vdanyliu/Desktop/lem_in/lm_error.c -o CMakeFiles/Lem_in.dir/lm_error.c.s
 
+CMakeFiles/Lem_in.dir/lm_link_manager.c.o: CMakeFiles/Lem_in.dir/flags.make
+CMakeFiles/Lem_in.dir/lm_link_manager.c.o: ../lm_link_manager.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lem_in.dir/lm_link_manager.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_link_manager.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_link_manager.c
+
+CMakeFiles/Lem_in.dir/lm_link_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lem_in.dir/lm_link_manager.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vdanyliu/Desktop/lem_in/lm_link_manager.c > CMakeFiles/Lem_in.dir/lm_link_manager.c.i
+
+CMakeFiles/Lem_in.dir/lm_link_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lem_in.dir/lm_link_manager.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vdanyliu/Desktop/lem_in/lm_link_manager.c -o CMakeFiles/Lem_in.dir/lm_link_manager.c.s
+
 CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: CMakeFiles/Lem_in.dir/flags.make
 CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../lm_parcer_links.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Lem_in.dir/lm_parcer_links.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Lem_in.dir/lm_parcer_links.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_parcer_links.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_parcer_links.c
 
 CMakeFiles/Lem_in.dir/lm_parcer_links.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/Lem_in.dir/lm_parcer_links.c.s: cmake_force
 
 CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: CMakeFiles/Lem_in.dir/flags.make
 CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o: ../lm_parcer_rooms.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_parcer_rooms.c
 
 CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.s: cmake_force
 
 CMakeFiles/Lem_in.dir/lm_usefull.c.o: CMakeFiles/Lem_in.dir/flags.make
 CMakeFiles/Lem_in.dir/lm_usefull.c.o: ../lm_usefull.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Lem_in.dir/lm_usefull.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Lem_in.dir/lm_usefull.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_usefull.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_usefull.c
 
 CMakeFiles/Lem_in.dir/lm_usefull.c.i: cmake_force
@@ -135,9 +148,35 @@ CMakeFiles/Lem_in.dir/lm_usefull.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lem_in.dir/lm_usefull.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vdanyliu/Desktop/lem_in/lm_usefull.c -o CMakeFiles/Lem_in.dir/lm_usefull.c.s
 
+CMakeFiles/Lem_in.dir/lm_usefull2.c.o: CMakeFiles/Lem_in.dir/flags.make
+CMakeFiles/Lem_in.dir/lm_usefull2.c.o: ../lm_usefull2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Lem_in.dir/lm_usefull2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_usefull2.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_usefull2.c
+
+CMakeFiles/Lem_in.dir/lm_usefull2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lem_in.dir/lm_usefull2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vdanyliu/Desktop/lem_in/lm_usefull2.c > CMakeFiles/Lem_in.dir/lm_usefull2.c.i
+
+CMakeFiles/Lem_in.dir/lm_usefull2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lem_in.dir/lm_usefull2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vdanyliu/Desktop/lem_in/lm_usefull2.c -o CMakeFiles/Lem_in.dir/lm_usefull2.c.s
+
+CMakeFiles/Lem_in.dir/lm_way_finder.c.o: CMakeFiles/Lem_in.dir/flags.make
+CMakeFiles/Lem_in.dir/lm_way_finder.c.o: ../lm_way_finder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Lem_in.dir/lm_way_finder.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/lm_way_finder.c.o   -c /Users/vdanyliu/Desktop/lem_in/lm_way_finder.c
+
+CMakeFiles/Lem_in.dir/lm_way_finder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lem_in.dir/lm_way_finder.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vdanyliu/Desktop/lem_in/lm_way_finder.c > CMakeFiles/Lem_in.dir/lm_way_finder.c.i
+
+CMakeFiles/Lem_in.dir/lm_way_finder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lem_in.dir/lm_way_finder.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vdanyliu/Desktop/lem_in/lm_way_finder.c -o CMakeFiles/Lem_in.dir/lm_way_finder.c.s
+
 CMakeFiles/Lem_in.dir/main.c.o: CMakeFiles/Lem_in.dir/flags.make
 CMakeFiles/Lem_in.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Lem_in.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Lem_in.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lem_in.dir/main.c.o   -c /Users/vdanyliu/Desktop/lem_in/main.c
 
 CMakeFiles/Lem_in.dir/main.c.i: cmake_force
@@ -153,9 +192,12 @@ Lem_in_OBJECTS = \
 "CMakeFiles/Lem_in.dir/gnl_manager.c.o" \
 "CMakeFiles/Lem_in.dir/lm_create_lem.c.o" \
 "CMakeFiles/Lem_in.dir/lm_error.c.o" \
+"CMakeFiles/Lem_in.dir/lm_link_manager.c.o" \
 "CMakeFiles/Lem_in.dir/lm_parcer_links.c.o" \
 "CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o" \
 "CMakeFiles/Lem_in.dir/lm_usefull.c.o" \
+"CMakeFiles/Lem_in.dir/lm_usefull2.c.o" \
+"CMakeFiles/Lem_in.dir/lm_way_finder.c.o" \
 "CMakeFiles/Lem_in.dir/main.c.o"
 
 # External object files for target Lem_in
@@ -164,14 +206,17 @@ Lem_in_EXTERNAL_OBJECTS =
 Lem_in: CMakeFiles/Lem_in.dir/gnl_manager.c.o
 Lem_in: CMakeFiles/Lem_in.dir/lm_create_lem.c.o
 Lem_in: CMakeFiles/Lem_in.dir/lm_error.c.o
+Lem_in: CMakeFiles/Lem_in.dir/lm_link_manager.c.o
 Lem_in: CMakeFiles/Lem_in.dir/lm_parcer_links.c.o
 Lem_in: CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o
 Lem_in: CMakeFiles/Lem_in.dir/lm_usefull.c.o
+Lem_in: CMakeFiles/Lem_in.dir/lm_usefull2.c.o
+Lem_in: CMakeFiles/Lem_in.dir/lm_way_finder.c.o
 Lem_in: CMakeFiles/Lem_in.dir/main.c.o
 Lem_in: CMakeFiles/Lem_in.dir/build.make
 Lem_in: libft.a
 Lem_in: CMakeFiles/Lem_in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Lem_in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable Lem_in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lem_in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

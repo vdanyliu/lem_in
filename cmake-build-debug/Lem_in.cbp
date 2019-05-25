@@ -371,6 +371,9 @@
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_error.c">
 			<Option target="Lem_in"/>
 		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_link_manager.c">
+			<Option target="Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_parcer_links.c">
 			<Option target="Lem_in"/>
 		</Unit>
@@ -378,6 +381,12 @@
 			<Option target="Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_usefull.c">
+			<Option target="Lem_in"/>
+		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_usefull2.c">
+			<Option target="Lem_in"/>
+		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_way_finder.c">
 			<Option target="Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/main.c">
