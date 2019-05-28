@@ -36,5 +36,6 @@ t_lem		*lm_create_lem(void)
 	head->gnl = (t_gnl_buff*)malloc(sizeof(t_gnl_buff));
 	head->gnl->gnl = 0;
 	head->gnl->next = NULL;
+	head->ways = 0;
 	return (head);
 }

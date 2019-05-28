@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/25 18:36:28 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/28 18:52:21 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,14 @@ static t_lroom	*lm_bfs_to_list(t_bfs *head)
 		{
 			head_list = (t_lroom*)malloc(sizeof(t_lroom));
 			head_list->next = NULL;
-			buff_list = head_list;
-			buff_list->room = head->room;
+			head_list->room = head->room;
 			head = lm_find_parent(head, head->parent);
 			continue ;
 		}
-		buff_list->next = (t_lroom*)malloc(sizeof(t_lroom));
-		buff_list = buff_list->next;
-		buff_list->room = head->room;
-		buff_list->next = NULL;
+		buff_list = head_list;
+		head_list = (t_lroom*)malloc(sizeof(t_lroom));
+		head_list->next = buff_list;
+		head_list->room = head->room;
 		head = lm_find_parent(head, head->parent);
 	}
 	return (head_list);
@@ -72,12 +71,10 @@ static	t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
 		curr_link = curr->room->link;
 		while (curr_link)
 		{
-			if (!lm_check_stack(head, curr_link->room))
+			if (!lm_check_stack(head, curr_link->room, lem->ways, lem))
 				lm_bfs_add_node(head, curr->room, curr_link->room, 0);
 			if (curr_link->room == to)
-			{
 				return (lm_bfs_to_way(head));
-			}
 			curr_link = curr_link->next;
 		}
 		curr = curr->next;
@@ -93,7 +90,7 @@ static t_wroom	*lm_find_way(t_lem *lem)
 	curr = lem->start->link;
 	while (curr)
 	{
-		way = lm_bfs(lem, curr->room, lem->finish);
+		way = lm_bfs(lem, lem->start, lem->finish);
 		if (way != 0)
 			return (way);
 		curr = curr->next;
@@ -122,6 +119,19 @@ void		lm_debug_print_ways(t_wroom *ways)
 	}
 }
 
+void		lm_find_all_ways(t_lem *lem)
+{
+	t_wroom	*buff;
+	t_wroom	*last;
+
+	last = lem->ways;
+	while ((buff = lm_find_way(lem)) != 0)
+	{
+		last->nextlist = buff;
+		last = last->nextlist;
+	}
+}
+
 void		lm_find_ways(t_lem *lem)
 {
 	lem->ways = lm_find_way(lem);
@@ -130,5 +140,6 @@ void		lm_find_ways(t_lem *lem)
 		ft_printf("ERROR\nCant find any ways\n");
 		exit(0);
 	}
+	lm_find_all_ways(lem);
 	lm_debug_print_ways(lem->ways);
 }

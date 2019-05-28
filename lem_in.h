@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/25 17:46:40 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/28 18:26:00 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ void				lm_find_ways(t_lem *lem);
 t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr);
 void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room, int i);
 void				lm_free_bfs(t_bfs *bfs);
-int 				lm_check_stack(t_bfs *head, t_room *room);
+int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem);
 
 #endif
