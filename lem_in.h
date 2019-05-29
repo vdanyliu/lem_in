@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/28 18:26:00 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 18:34:49 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,16 @@ void				lm_free_split(char **str);
 t_room				*lm_last_room(t_lem *lem);
 void				lm_add_gnl(t_gnl_buff *gnl_lst, char *gnl);
 void				lm_print_gnl(t_gnl_buff *gnl_lst);
-void				lm_cut_start_links(t_lem *lem);
 void				lm_find_ways(t_lem *lem);
 t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr);
 void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room, int i);
 void				lm_free_bfs(t_bfs *bfs);
 int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem);
 void				lm_free_way(t_lem *lem);
+int 				lm_bahram(t_lem *lem);
+t_wroom				*lm_find_way(t_lem *lem);
+void				lm_create_link(t_room *room1, t_room *room2);
+void				lm_print_links(t_lem *lem);
+void				lm_debug_print_ways(t_wroom *ways);
 
 #endif

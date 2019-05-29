@@ -2269,6 +2269,33 @@ libft/src/pf_writer.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/src/pf_writer.c.s
 .PHONY : libft/src/pf_writer.c.s
 
+lm_bahram.o: lm_bahram.c.o
+
+.PHONY : lm_bahram.o
+
+# target to build an object file
+lm_bahram.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram.c.o
+.PHONY : lm_bahram.c.o
+
+lm_bahram.i: lm_bahram.c.i
+
+.PHONY : lm_bahram.i
+
+# target to preprocess a source file
+lm_bahram.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram.c.i
+.PHONY : lm_bahram.c.i
+
+lm_bahram.s: lm_bahram.c.s
+
+.PHONY : lm_bahram.s
+
+# target to generate assembly for a file
+lm_bahram.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram.c.s
+.PHONY : lm_bahram.c.s
+
 lm_create_lem.o: lm_create_lem.c.o
 
 .PHONY : lm_create_lem.o
@@ -2759,6 +2786,9 @@ help:
 	@echo "... libft/src/pf_writer.o"
 	@echo "... libft/src/pf_writer.i"
 	@echo "... libft/src/pf_writer.s"
+	@echo "... lm_bahram.o"
+	@echo "... lm_bahram.i"
+	@echo "... lm_bahram.s"
 	@echo "... lm_create_lem.o"
 	@echo "... lm_create_lem.i"
 	@echo "... lm_create_lem.s"

@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-static void			lm_create_link(t_room *room1, t_room *room2)
+void			lm_create_link(t_room *room1, t_room *room2)
 {
 	t_lroom	*buff;
 

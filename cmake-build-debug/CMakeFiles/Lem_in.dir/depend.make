@@ -6,6 +6,11 @@ CMakeFiles/Lem_in.dir/gnl_manager.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/gnl_manager.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/gnl_manager.c.o: ../libft/src/libft.h
 
+CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../lem_in.h
+CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../libft/src/ft_printf.h
+CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../libft/src/libft.h
+CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../lm_bahram.c
+
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/libft.h

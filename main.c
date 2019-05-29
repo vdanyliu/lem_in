@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/29 14:03:54 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 20:25:28 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,7 @@ static void 	lm_parcer(t_lem *lem)
 			lm_hesh_parcer(gnl, lem);
 		else
 		{
-			lm_add(gnl, lem, 0);   // 3 мод
-//			free(gnl);
+			lm_add(gnl, lem, 0);
 		}
 	}
 	if (!lem->start || !lem->finish)
@@ -117,29 +116,6 @@ void			lm_print_links(t_lem *lem) //debug
 	}
 }
 
-void			lm_print_links_head(t_lem *lem) // debug
-{
-	t_lroom	*head;
-	t_lroom	*links;
-	t_room	*room;
-
-	head = lem->rooms->link;
-	while(head)
-	{
-		room = head->room;
-		links = room->link;
-		ft_printf("link of head head(%i)\tlinks = ", head->room->num);
-		while(links)
-		{
-			ft_printf("| num = %i|\t", links->room->num);
-			links = links->next;
-		}
-		head = head->next;
-		ft_printf("\n");
-	}
-	ft_printf("end of start links\n");
-}
-
 static void		lm_initiation(t_lem **lem_in)
 {
 	*lem_in = lm_create_lem();
@@ -154,7 +130,6 @@ int				main(void)
 	lem_in = NULL;
 	lm_initiation(&lem_in);
 	//lm_print_links(lem_in); //debug
-	lm_cut_start_links(lem_in);
 	//lm_print_links_head(lem_in); //debug
 	lm_find_ways(lem_in);
 	return (0);

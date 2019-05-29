@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/29 15:37:25 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 21:23:09 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static t_wroom	*lm_bfs_to_way(t_bfs *head)
 	return (way);
 }
 
-static	t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
+static t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
 {
 	t_bfs	*head;
 	t_bfs	*curr;
@@ -79,10 +79,12 @@ static	t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
 		}
 		curr = curr->next;
 	}
+	lm_free_bfs(head);
+	lm_bfs_add_node(0, 0, 0, 1);
 	return (0);
 }
 
-static t_wroom	*lm_find_way(t_lem *lem)
+t_wroom		*lm_find_way(t_lem *lem)
 {
 	t_wroom	*way;
 
@@ -130,6 +132,9 @@ void		lm_find_all_ways(t_lem *lem)
 			last->nextlist = buff;
 			last = last->nextlist;
 		}
+		//lm_debug_print_ways(lem->ways);
+		if (lm_bahram(lem))
+			lm_find_all_ways(lem);
 	}
 }
 
@@ -143,5 +148,4 @@ void		lm_find_ways(t_lem *lem)
 	}
 	lm_find_all_ways(lem);
 	lm_debug_print_ways(lem->ways);
-	system("leaks -q Lem_in");
 }

@@ -22,7 +22,7 @@
 # include <sys/types.h>
 # include "ft_printf.h"
 
-# define BUFF_SIZE 20
+# define BUFF_SIZE 16
 
 typedef struct		s_gnl
 {
