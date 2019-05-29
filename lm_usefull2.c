@@ -6,11 +6,35 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 16:59:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/28 18:26:00 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:18:47 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
+void				lm_free_way(t_lem *lem)
+{
+	t_wroom	*buff;
+	t_wroom	*fre;
+	t_lroom	*curr;
+	t_lroom	*curr_free;
+
+	buff = lem->ways;
+	while (buff)
+	{
+		fre = buff;
+		buff = buff->nextlist;
+		curr = fre->list;
+		while (curr)
+		{
+			curr_free = curr;
+			curr = curr->next;
+			free(curr_free);
+		}
+		free(fre);
+	}
+	lem->ways = NULL;
+}
 
 void				lm_free_bfs(t_bfs *bfs)
 {

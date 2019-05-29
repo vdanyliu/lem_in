@@ -78,5 +78,6 @@ t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr);
 void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room, int i);
 void				lm_free_bfs(t_bfs *bfs);
 int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem);
+void				lm_free_way(t_lem *lem);
 
 #endif

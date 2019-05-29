@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/28 17:43:33 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 14:03:54 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,7 +155,7 @@ int				main(void)
 	lm_initiation(&lem_in);
 	//lm_print_links(lem_in); //debug
 	lm_cut_start_links(lem_in);
-	lm_print_links_head(lem_in); //debug
+	//lm_print_links_head(lem_in); //debug
 	lm_find_ways(lem_in);
 	return (0);
 }

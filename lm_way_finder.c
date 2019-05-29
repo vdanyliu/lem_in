@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/28 18:52:21 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:37:25 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,18 +84,10 @@ static	t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
 
 static t_wroom	*lm_find_way(t_lem *lem)
 {
-	t_lroom	*curr;
 	t_wroom	*way;
 
-	curr = lem->start->link;
-	while (curr)
-	{
-		way = lm_bfs(lem, lem->start, lem->finish);
-		if (way != 0)
-			return (way);
-		curr = curr->next;
-	}
-	return (0);
+	way = lm_bfs(lem, lem->start, lem->finish);
+	return (way);
 }
 
 void		lm_debug_print_ways(t_wroom *ways)
@@ -124,11 +116,20 @@ void		lm_find_all_ways(t_lem *lem)
 	t_wroom	*buff;
 	t_wroom	*last;
 
+	lm_free_way(lem);
 	last = lem->ways;
 	while ((buff = lm_find_way(lem)) != 0)
 	{
-		last->nextlist = buff;
-		last = last->nextlist;
+		if (!last)
+		{
+			lem->ways = buff;
+			last = lem->ways;
+		}
+		else
+		{
+			last->nextlist = buff;
+			last = last->nextlist;
+		}
 	}
 }
 
@@ -142,4 +143,5 @@ void		lm_find_ways(t_lem *lem)
 	}
 	lm_find_all_ways(lem);
 	lm_debug_print_ways(lem->ways);
+	system("leaks -q Lem_in");
 }
