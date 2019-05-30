@@ -12,6 +12,24 @@
 
 #include "lem_in.h"
 
+void				lm_way_len(t_wroom *ways)
+{
+	t_lroom	*curr_way;
+
+	while (ways)
+	{
+		curr_way = ways->list;
+		ways->len = 0;
+		while (curr_way->next)
+		{
+			ways->len += 1;
+			curr_way = curr_way->next;
+		}
+		ways->load = ways->len;
+		ways = ways->nextlist;
+	}
+}
+
 void				lm_free_way(t_lem *lem)
 {
 	t_wroom	*buff;

@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/29 18:34:49 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/30 14:52:19 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ typedef struct		s_lroom
 
 typedef struct		s_wroom
 {
+	int				len;
+	int 			load;
 	t_lroom			*list;
 	struct s_wroom	*nextlist;
 }					t_wroom;
@@ -51,6 +53,16 @@ typedef struct		s_bfs
 	struct s_bfs	*pre;
 }					t_bfs;
 
+typedef struct		s_ants
+{
+	int 			ant_num;
+	t_room			*curr;
+	t_wroom			*way;
+	t_lroom			*l_way;
+	struct s_ants	*next;
+	struct s_ants	*pre;
+}					t_ants;
+
 typedef struct		s_lem_in
 {
 	long			ants_numb;
@@ -59,8 +71,10 @@ typedef struct		s_lem_in
 	t_room			*finish;
 	t_gnl_buff		*gnl;
 	t_wroom			*ways;
+	t_ants			*ants;
 }					t_lem;
 
+int 				g_turns;
 void				lm_error(int i);
 t_lem				*lm_create_lem(void);
 void				lm_add(char *gnl, t_lem *lem, int mod);
@@ -83,5 +97,8 @@ t_wroom				*lm_find_way(t_lem *lem);
 void				lm_create_link(t_room *room1, t_room *room2);
 void				lm_print_links(t_lem *lem);
 void				lm_debug_print_ways(t_wroom *ways);
+void				lm_way_len(t_wroom *ways);
+void				lm_ant_manager(t_lem *lem);
+int 				lm_room_free(t_ants *ants, t_room *room, t_room *finish);
 
 #endif

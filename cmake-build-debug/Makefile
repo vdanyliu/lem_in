@@ -2269,6 +2269,33 @@ libft/src/pf_writer.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/src/pf_writer.c.s
 .PHONY : libft/src/pf_writer.c.s
 
+lm_ant_manager.o: lm_ant_manager.c.o
+
+.PHONY : lm_ant_manager.o
+
+# target to build an object file
+lm_ant_manager.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_ant_manager.c.o
+.PHONY : lm_ant_manager.c.o
+
+lm_ant_manager.i: lm_ant_manager.c.i
+
+.PHONY : lm_ant_manager.i
+
+# target to preprocess a source file
+lm_ant_manager.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_ant_manager.c.i
+.PHONY : lm_ant_manager.c.i
+
+lm_ant_manager.s: lm_ant_manager.c.s
+
+.PHONY : lm_ant_manager.s
+
+# target to generate assembly for a file
+lm_ant_manager.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_ant_manager.c.s
+.PHONY : lm_ant_manager.c.s
+
 lm_bahram.o: lm_bahram.c.o
 
 .PHONY : lm_bahram.o
@@ -2786,6 +2813,9 @@ help:
 	@echo "... libft/src/pf_writer.o"
 	@echo "... libft/src/pf_writer.i"
 	@echo "... libft/src/pf_writer.s"
+	@echo "... lm_ant_manager.o"
+	@echo "... lm_ant_manager.i"
+	@echo "... lm_ant_manager.s"
 	@echo "... lm_bahram.o"
 	@echo "... lm_bahram.i"
 	@echo "... lm_bahram.s"
