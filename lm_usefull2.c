@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 16:59:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/29 20:10:37 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/30 18:00:54 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem)
 {
 	t_lroom	*head_list;
 
-	if (room == lem->finish || room == lem->start)
+	if (room == lem->finish)
 		return (0);
 	while (head)
 	{

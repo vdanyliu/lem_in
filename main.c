@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 16:15:58 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/30 19:48:33 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ void			lm_print_links(t_lem *lem) //debug
 		ft_printf("|num = %i, name = %s|\n", link->room->num, link->room->name);
 		room = room->next;
 	}
+	ft_printf("\n\n\n");
 }
 
 static void		lm_initiation(t_lem **lem_in)

@@ -6,17 +6,17 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:51:20 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/29 20:49:23 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/05/30 20:19:48 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static int 		lm_same(t_room *room, t_lroom *way)
+static int 		lm_same(t_room *room, t_lroom *way, t_lem *lem)
 {
 	while (way->next)
 	{
-		if (way->room == room)
+		if (way->room == room && (room != lem->finish && room != lem->start))
 			return (1);
 		way = way->next;
 	}
@@ -49,21 +49,20 @@ static t_lroom		*lm_del_link(t_lroom *head, t_room *room)
 static int 		lm_check_same(t_wroom *all, t_wroom *way, t_lem *lem)
 {
 	t_lroom	*curr;
-	t_lroom	*next;
+	t_lroom	*pre;
 	while (all)
 	{
 		curr = all->list;
 		while (curr && curr->next)
 		{
+			pre = curr;
 			curr = curr->next;
-			next = curr->next;
-			if (lm_same(curr->room, way->list))
+			if (lm_same(curr->room, way->list, lem))
 			{
-				next->room->link = lm_del_link((next->room->link), curr->room);
-//				lm_del_link(&(next->room->link), curr->room);
+				ft_printf("delete room %s, from room %s\n", pre->room->name, curr->room->name);
+				curr->room->link = lm_del_link((curr->room->link), pre->room);
 				return (1);
 			}
-			curr = curr->next;
 		}
 		all = all->nextlist;
 	}
@@ -139,7 +138,9 @@ int 			lm_bahram(t_lem *lem)
 	int		i;
 
 	i = 0;
+	//lm_print_links(lem);
 	lm_change_graph_dir(lem->ways);
+	//lm_print_links(lem);
 	all = lem->ways;
 	lem->ways = NULL;
 	way = lm_find_way(lem);
@@ -154,7 +155,11 @@ int 			lm_bahram(t_lem *lem)
 //	ft_printf("\nEND\n\n\n");
 	lem->ways = all;
 	i = lm_check_same(lem->ways, way, lem);
+	//lm_print_links(lem);
 	lm_back_graph_dir(lem->ways);
+	//lm_print_links(lem);
+	ft_printf("way in bahra:\n");
+	lm_debug_print_ways(way);
 	lm_free_way_bah(way);
 	return (i);
 }
