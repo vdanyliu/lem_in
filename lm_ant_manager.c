@@ -6,13 +6,13 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 14:06:25 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 15:21:30 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/03 14:11:16 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static t_ants	*lm_create_ants(long num)
+t_ants	*lm_create_ants(long num)
 {
 	t_ants	*head;
 	t_ants	*curr;
@@ -60,8 +60,9 @@ static t_wroom	*lm_take_way(t_wroom *ways)
 	return (curr_choice);
 }
 
-static void		lm_ants_ways(t_ants *ants_list, t_wroom *ways)
+void		lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem)
 {
+	lm_way_len(lem->ways);
 	while (ants_list)
 	{
 		ants_list->way = lm_take_way(ways);
@@ -116,7 +117,7 @@ static void		lm_move_ants(t_ants *ants, t_lem *lem)
 void		lm_ant_manager(t_lem *lem)
 {
 	g_turns = 0;
-	lem->ants = lm_create_ants(lem->ants_numb);
-	lm_ants_ways(lem->ants, lem->ways);
+	//lem->ants = lm_create_ants(lem->ants_numb);
+	//lm_ants_ways(lem->ants, lem->ways);
 	lm_move_ants(lem->ants, lem);
 }

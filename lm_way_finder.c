@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 20:05:27 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:49:30 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static t_lroom	*lm_bfs_to_list(t_bfs *head)
 		{
 			head_list = (t_lroom*)malloc(sizeof(t_lroom));
 			head_list->next = NULL;
+			head_list->pre = NULL;
 			head_list->room = head->room;
 			head = lm_find_parent(head, head->parent);
 			continue ;
@@ -41,6 +42,7 @@ static t_lroom	*lm_bfs_to_list(t_bfs *head)
 		buff_list = head_list;
 		head_list = (t_lroom*)malloc(sizeof(t_lroom));
 		head_list->next = buff_list;
+		buff_list->pre = head_list;
 		head_list->room = head->room;
 		head = lm_find_parent(head, head->parent);
 	}
@@ -53,6 +55,8 @@ static t_wroom	*lm_bfs_to_way(t_bfs *head)
 	way = (t_wroom*)malloc(sizeof(t_wroom));
 	way->list = lm_bfs_to_list(head);
 	way->nextlist = NULL;
+	way->len = 0;
+	way->load = 0;
 	lm_free_bfs(head);
 	lm_bfs_add_node(0, 0, 0, 1);
 	return (way);
@@ -89,6 +93,9 @@ t_wroom		*lm_find_way(t_lem *lem)
 	t_wroom	*way;
 
 	way = lm_bfs(lem, lem->start, lem->finish);
+//	lm_ants_ways(lem->ants, lem->ways);
+//	pre = lm_calc_turns(lem->ants);
+
 	return (way);
 }
 
@@ -113,30 +120,42 @@ void		lm_debug_print_ways(t_wroom *ways)
 	}
 }
 
+void		lm_free_t_wroom(t_wroom *buff)
+{
+	t_lroom	*curr;
+	t_lroom	*pre;
+
+	curr = buff->list;
+	while (curr)
+	{
+		pre = curr;
+		curr = curr->next;
+		free(pre);
+	}
+	free(buff);
+}
+
 void		lm_find_all_ways(t_lem *lem)
 {
 	t_wroom	*buff;
 	t_wroom	*last;
+	int 	pre;
 
-	lm_debug_print_ways(lem->ways);
-	lm_free_way(lem);
 	last = lem->ways;
 	while ((buff = lm_find_way(lem)) != 0)
 	{
-		if (!last)
+		lm_ants_ways(lem->ants, lem->ways, lem);
+		pre = lm_calc_turns(lem);
+		ft_printf("turn calc = %i\n", pre);
+		last->nextlist = buff;
+		lm_ants_ways(lem->ants, lem->ways, lem);
+		if (pre <= lm_calc_turns(lem))
 		{
-			lem->ways = buff;
-			last = lem->ways;
+			lm_free_t_wroom(buff);
+			last->nextlist = NULL;
+			return;
 		}
-		else
-		{
-			last->nextlist = buff;
-			last = last->nextlist;
-		}
-		if (lm_bahram(lem))
-		{
-			lm_find_all_ways(lem);
-		}
+		last = last->nextlist;
 	}
 }
 
@@ -148,5 +167,9 @@ void		lm_find_ways(t_lem *lem)
 		ft_printf("ERROR\nCant find any ways\n");
 		exit(0);
 	}
+	lem->ants = lm_create_ants(lem->ants_numb);
+	lm_way_len(lem->ways);
+	if (lem->ways->len == 1)
+		return ;
 	lm_find_all_ways(lem);
 }

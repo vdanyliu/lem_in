@@ -22,6 +22,20 @@ libft.h
 libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
 
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isalpha.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isascii.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isdigit.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_islower.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isprint.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isspace.c
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_isupper.c
+
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_itoa.c
 libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
@@ -138,6 +152,8 @@ libft.h
 libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
 
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_strcmp.c
+
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_strcpy.c
 libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
@@ -153,6 +169,8 @@ libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_strequ.c
 libft.h
 /Users/vdanyliu/Desktop/lem_in/libft/src/libft.h
+
+/Users/vdanyliu/Desktop/lem_in/libft/src/ft_striter.c
 
 /Users/vdanyliu/Desktop/lem_in/libft/src/ft_striteri.c
 libft.h

@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 14:52:19 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/03 15:59:00 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_lroom
 {
 	t_room			*room;
 	struct s_lroom	*next;
+	struct s_lroom	*pre;
 }					t_lroom;
 
 typedef struct		s_wroom
@@ -75,6 +76,7 @@ typedef struct		s_lem_in
 }					t_lem;
 
 int 				g_turns;
+int 				g_debug;
 void				lm_error(int i);
 t_lem				*lm_create_lem(void);
 void				lm_add(char *gnl, t_lem *lem, int mod);
@@ -100,5 +102,8 @@ void				lm_debug_print_ways(t_wroom *ways);
 void				lm_way_len(t_wroom *ways);
 void				lm_ant_manager(t_lem *lem);
 int 				lm_room_free(t_ants *ants, t_room *room, t_room *finish);
+t_ants				*lm_create_ants(long num);
+void				lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem);
+int 				lm_calc_turns(t_lem *lem);
 
 #endif

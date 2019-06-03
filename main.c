@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 19:48:33 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:49:04 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void			lm_add(char *gnl, t_lem *lem, int mod)
 		lm_parce_rooms(gnl, lem);
 	else
 		lm_parce_link(gnl, lem);
-//	ft_printf("%s\n", gnl);
 	lm_add_gnl(lem->gnl, gnl);
 }
 
@@ -48,8 +47,6 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 	{
 		if (lem->start != NULL)
 			lm_error(66);
-		//ft_printf("%s\n", gnl);
-		//free(gnl);
 		lm_add_gnl(lem->gnl, gnl);
 		get_next_line(0, &gnl);
 		lm_add(gnl, lem, 0);
@@ -59,8 +56,6 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 	{
 		if (lem->finish != NULL)
 			lm_error(66);
-//		ft_printf("%s\n", gnl);
-//		free(gnl);
 		lm_add_gnl(lem->gnl, gnl);
 		get_next_line(0, &gnl);
 		lm_add(gnl, lem, 0);
@@ -68,8 +63,6 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 	}
 	else
 		lm_add_gnl(lem->gnl, gnl);
-//		ft_printf("%s\n", gnl);
-	//free(gnl);
 }
 
 static void 	lm_parcer(t_lem *lem)
@@ -132,9 +125,10 @@ int				main(void)
 	lm_initiation(&lem_in);
 	//lm_print_links(lem_in); //debug
 	lm_find_ways(lem_in);
-	lm_way_len(lem_in->ways);
+	//lm_way_len(lem_in->ways);
 	lm_debug_print_ways(lem_in->ways);
 	lm_ant_manager(lem_in);
-	ft_printf("turn = %i\n", g_turns);
+	ft_printf("turn = %i\ncalc turn = %i\n", g_turns, (lem_in->ways->load - 1));
+	system("leaks -q Lem_in"); 
 	return (0);
 }

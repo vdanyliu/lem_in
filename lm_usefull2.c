@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 16:59:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/05/30 18:00:54 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/03 15:59:00 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,20 @@ int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem)
 		}
 	}
 	return (0);
+}
+
+int 				lm_calc_turns(t_lem *lem)
+{
+	int		i;
+	t_ants	*ants;
+
+	i = 0;
+	ants = lem->ants;
+	while (ants)
+	{
+		if (ants->way->load > i)
+			i = ants->way->load;
+		ants = ants->next;
+	}
+	return (i);
 }
