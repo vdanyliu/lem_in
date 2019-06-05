@@ -2323,6 +2323,33 @@ lm_bahram.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram.c.s
 .PHONY : lm_bahram.c.s
 
+lm_bahram_way_finder.o: lm_bahram_way_finder.c.o
+
+.PHONY : lm_bahram_way_finder.o
+
+# target to build an object file
+lm_bahram_way_finder.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o
+.PHONY : lm_bahram_way_finder.c.o
+
+lm_bahram_way_finder.i: lm_bahram_way_finder.c.i
+
+.PHONY : lm_bahram_way_finder.i
+
+# target to preprocess a source file
+lm_bahram_way_finder.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.i
+.PHONY : lm_bahram_way_finder.c.i
+
+lm_bahram_way_finder.s: lm_bahram_way_finder.c.s
+
+.PHONY : lm_bahram_way_finder.s
+
+# target to generate assembly for a file
+lm_bahram_way_finder.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.s
+.PHONY : lm_bahram_way_finder.c.s
+
 lm_create_lem.o: lm_create_lem.c.o
 
 .PHONY : lm_create_lem.o
@@ -2819,6 +2846,9 @@ help:
 	@echo "... lm_bahram.o"
 	@echo "... lm_bahram.i"
 	@echo "... lm_bahram.s"
+	@echo "... lm_bahram_way_finder.o"
+	@echo "... lm_bahram_way_finder.i"
+	@echo "... lm_bahram_way_finder.s"
 	@echo "... lm_create_lem.o"
 	@echo "... lm_create_lem.i"
 	@echo "... lm_create_lem.s"

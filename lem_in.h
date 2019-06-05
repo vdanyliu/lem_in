@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/03 15:59:00 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/05 19:42:03 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_room
 	char			*name;
 	struct s_room	*next;
 	struct s_lroom	*link;
+	struct s_wroom	*belong_to;
 }					t_room;
 
 typedef struct		s_lroom
@@ -52,6 +53,7 @@ typedef struct		s_bfs
 	t_room			*room;
 	struct s_bfs	*next;
 	struct s_bfs	*pre;
+	int 			flags;
 }					t_bfs;
 
 typedef struct		s_ants
@@ -95,7 +97,6 @@ void				lm_free_bfs(t_bfs *bfs);
 int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem);
 void				lm_free_way(t_lem *lem);
 int 				lm_bahram(t_lem *lem);
-t_wroom				*lm_find_way(t_lem *lem);
 void				lm_create_link(t_room *room1, t_room *room2);
 void				lm_print_links(t_lem *lem);
 void				lm_debug_print_ways(t_wroom *ways);
@@ -105,5 +106,8 @@ int 				lm_room_free(t_ants *ants, t_room *room, t_room *finish);
 t_ants				*lm_create_ants(long num);
 void				lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem);
 int 				lm_calc_turns(t_lem *lem);
+t_wroom				*lm_find_way_bahram(t_lem *lem);
+void				lm_free_t_wroom(t_wroom *buff);
+t_wroom				*lm_bfs_to_way(t_bfs *head);
 
 #endif

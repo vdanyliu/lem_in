@@ -371,6 +371,9 @@
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_bahram.c">
 			<Option target="Lem_in"/>
 		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_bahram_way_finder.c">
+			<Option target="Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_create_lem.c">
 			<Option target="Lem_in"/>
 		</Unit>

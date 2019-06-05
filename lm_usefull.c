@@ -62,6 +62,7 @@ t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr)
 	new->room = curr;
 	new->next = NULL;
 	new->pre = NULL;
+	new->flags = 0;
 	return (new);
 }
 

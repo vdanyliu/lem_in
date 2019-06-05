@@ -101,6 +101,7 @@ int 				lm_calc_turns(t_lem *lem)
 	t_ants	*ants;
 
 	i = 0;
+	lm_ants_ways(lem->ants, lem->ways, lem);
 	ants = lem->ants;
 	while (ants)
 	{

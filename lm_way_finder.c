@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/03 16:49:30 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/05 19:53:40 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static t_lroom	*lm_bfs_to_list(t_bfs *head)
 	return (head_list);
 }
 
-static t_wroom	*lm_bfs_to_way(t_bfs *head)
+t_wroom	*lm_bfs_to_way(t_bfs *head)
 {
 	t_wroom *way;
 	way = (t_wroom*)malloc(sizeof(t_wroom));
@@ -86,17 +86,6 @@ static t_wroom	*lm_bfs(t_lem *lem, t_room *from, t_room *to)
 	lm_free_bfs(head);
 	lm_bfs_add_node(0, 0, 0, 1);
 	return (0);
-}
-
-t_wroom		*lm_find_way(t_lem *lem)
-{
-	t_wroom	*way;
-
-	way = lm_bfs(lem, lem->start, lem->finish);
-//	lm_ants_ways(lem->ants, lem->ways);
-//	pre = lm_calc_turns(lem->ants);
-
-	return (way);
 }
 
 void		lm_debug_print_ways(t_wroom *ways)
@@ -142,26 +131,25 @@ void		lm_find_all_ways(t_lem *lem)
 	int 	pre;
 
 	last = lem->ways;
-	while ((buff = lm_find_way(lem)) != 0)
+	while ((buff = lm_bfs(lem, lem->start, lem->finish)) != 0)
 	{
-		lm_ants_ways(lem->ants, lem->ways, lem);
 		pre = lm_calc_turns(lem);
 		ft_printf("turn calc = %i\n", pre);
 		last->nextlist = buff;
-		lm_ants_ways(lem->ants, lem->ways, lem);
 		if (pre <= lm_calc_turns(lem))
 		{
 			lm_free_t_wroom(buff);
 			last->nextlist = NULL;
-			return;
+			break ;
 		}
 		last = last->nextlist;
 	}
+	lm_bahram(lem);
 }
 
 void		lm_find_ways(t_lem *lem)
 {
-	lem->ways = lm_find_way(lem);
+	lem->ways = lm_bfs(lem, lem->start, lem->finish);
 	if (lem->ways == 0)
 	{
 		ft_printf("ERROR\nCant find any ways\n");
@@ -170,6 +158,9 @@ void		lm_find_ways(t_lem *lem)
 	lem->ants = lm_create_ants(lem->ants_numb);
 	lm_way_len(lem->ways);
 	if (lem->ways->len == 1)
-		return ;
+	{
+		lm_ants_ways(lem->ants, lem->ways, lem);
+		return;
+	}
 	lm_find_all_ways(lem);
 }

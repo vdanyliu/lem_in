@@ -119,5 +119,6 @@ void		lm_ant_manager(t_lem *lem)
 	g_turns = 0;
 	//lem->ants = lm_create_ants(lem->ants_numb);
 	//lm_ants_ways(lem->ants, lem->ways);
+	lm_ants_ways(lem->ants, lem->ways, lem);
 	lm_move_ants(lem->ants, lem);
 }

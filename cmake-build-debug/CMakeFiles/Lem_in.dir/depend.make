@@ -16,6 +16,11 @@ CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../libft/src/libft.h
 CMakeFiles/Lem_in.dir/lm_bahram.c.o: ../lm_bahram.c
 
+CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../lem_in.h
+CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../libft/src/ft_printf.h
+CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../libft/src/libft.h
+CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../lm_bahram_way_finder.c
+
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/libft.h
