@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/05 19:42:03 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:29:24 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,9 @@ int 				lm_calc_turns(t_lem *lem);
 t_wroom				*lm_find_way_bahram(t_lem *lem);
 void				lm_free_t_wroom(t_wroom *buff);
 t_wroom				*lm_bfs_to_way(t_bfs *head);
+t_wroom				*lm_copy_way(t_wroom *origin);
+void				lm_add_way(t_wroom *origin, t_wroom *to_end);
+void				lm_bahram_fix_ways(t_lem *lem);
+t_lroom				*lm_check_way_same_node(t_wroom *head, t_lem *lem);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:51:20 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/05 16:10:36 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/06 17:58:56 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,25 +63,22 @@ int 		lm_bahram(t_lem *lem)
 	t_wroom	*way;
 	t_wroom	*copy;
 
-	pre = lm_calc_turns(lem);
 	lm_bahram_room_link_to_way(lem);
 	while ((way = lm_find_way_bahram(lem)) != 0)
 	{
-//		copy = lm_copy_way(lem);
-//		lm_add_way(lem->ways, way);
-//		lm_bahram_fix(lem);
-//		{
-//			if (pre < lm_calc_turns(lem))
-//			{
-//				lm_free_way(lem);
-//				lem->ways = copy;
-//				return (0);
-//			}
-//			lm_free_t_wroom(copy);
-//		}
 		lm_debug_print_ways(way);
-		break ;
+		copy = lm_copy_way(lem->ways);
+		pre = lm_calc_turns(lem);
+		lm_add_way(lem->ways, way);
+		lm_bahram_fix_ways(lem);
+		if (pre < lm_calc_turns(lem) || g_debug == 0)
+		{
+			lm_free_way(lem);
+			lem->ways = copy;
+			return (0);
+		}
+		lm_free_t_wroom(copy);
+		lm_bahram_room_link_to_way(lem);
 	}
-	//lm_print_belong(lem); //debug
 	return (0);
 }

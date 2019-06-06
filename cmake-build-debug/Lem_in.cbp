@@ -122,6 +122,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/bahram_way_fixer.c">
+			<Option target="Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/gnl_manager.c">
 			<Option target="Lem_in"/>
 		</Unit>
@@ -387,6 +390,9 @@
 			<Option target="Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_parcer_rooms.c">
+			<Option target="Lem_in"/>
+		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_useful3.c">
 			<Option target="Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/lem_in/lm_usefull.c">

@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/05 19:53:40 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/06 17:12:38 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void		lm_debug_print_ways(t_wroom *ways)
 		ft_printf("way number %i len = %i: ", i++, ways->len);
 		while (curr)
 		{
-			ft_printf("|%s| ", curr->room->name);
+			ft_printf("|%i| ", curr->room->num);
 			curr = curr->next;
 		}
 		ft_printf("end of way\n");
@@ -131,10 +131,10 @@ void		lm_find_all_ways(t_lem *lem)
 	int 	pre;
 
 	last = lem->ways;
+	//lm_bahram(lem);
 	while ((buff = lm_bfs(lem, lem->start, lem->finish)) != 0)
 	{
 		pre = lm_calc_turns(lem);
-		ft_printf("turn calc = %i\n", pre);
 		last->nextlist = buff;
 		if (pre <= lm_calc_turns(lem))
 		{

@@ -124,7 +124,7 @@ int				main(void)
 	lem_in = NULL;
 	lm_initiation(&lem_in);
 	lm_find_ways(lem_in);
-	lm_debug_print_ways(lem_in->ways);
+	//lm_debug_print_ways(lem_in->ways);
 	lm_ant_manager(lem_in);
 	ft_printf("turn = %i\ncalc turn = %i\n", g_turns, (lem_in->ways->load - 1));
 	//system("leaks -q Lem_in");

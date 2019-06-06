@@ -136,6 +136,33 @@ ft/fast:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
+bahram_way_fixer.o: bahram_way_fixer.c.o
+
+.PHONY : bahram_way_fixer.o
+
+# target to build an object file
+bahram_way_fixer.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/bahram_way_fixer.c.o
+.PHONY : bahram_way_fixer.c.o
+
+bahram_way_fixer.i: bahram_way_fixer.c.i
+
+.PHONY : bahram_way_fixer.i
+
+# target to preprocess a source file
+bahram_way_fixer.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/bahram_way_fixer.c.i
+.PHONY : bahram_way_fixer.c.i
+
+bahram_way_fixer.s: bahram_way_fixer.c.s
+
+.PHONY : bahram_way_fixer.s
+
+# target to generate assembly for a file
+bahram_way_fixer.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/bahram_way_fixer.c.s
+.PHONY : bahram_way_fixer.c.s
+
 gnl_manager.o: gnl_manager.c.o
 
 .PHONY : gnl_manager.o
@@ -2485,6 +2512,33 @@ lm_parcer_rooms.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.s
 .PHONY : lm_parcer_rooms.c.s
 
+lm_useful3.o: lm_useful3.c.o
+
+.PHONY : lm_useful3.o
+
+# target to build an object file
+lm_useful3.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_useful3.c.o
+.PHONY : lm_useful3.c.o
+
+lm_useful3.i: lm_useful3.c.i
+
+.PHONY : lm_useful3.i
+
+# target to preprocess a source file
+lm_useful3.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_useful3.c.i
+.PHONY : lm_useful3.c.i
+
+lm_useful3.s: lm_useful3.c.s
+
+.PHONY : lm_useful3.s
+
+# target to generate assembly for a file
+lm_useful3.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_useful3.c.s
+.PHONY : lm_useful3.c.s
+
 lm_usefull.o: lm_usefull.c.o
 
 .PHONY : lm_usefull.o
@@ -2603,6 +2657,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... Lem_in"
 	@echo "... ft"
+	@echo "... bahram_way_fixer.o"
+	@echo "... bahram_way_fixer.i"
+	@echo "... bahram_way_fixer.s"
 	@echo "... gnl_manager.o"
 	@echo "... gnl_manager.i"
 	@echo "... gnl_manager.s"
@@ -2864,6 +2921,9 @@ help:
 	@echo "... lm_parcer_rooms.o"
 	@echo "... lm_parcer_rooms.i"
 	@echo "... lm_parcer_rooms.s"
+	@echo "... lm_useful3.o"
+	@echo "... lm_useful3.i"
+	@echo "... lm_useful3.s"
 	@echo "... lm_usefull.o"
 	@echo "... lm_usefull.i"
 	@echo "... lm_usefull.s"

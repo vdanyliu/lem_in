@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Lem_in.dir/bahram_way_fixer.c.o"
   "CMakeFiles/Lem_in.dir/gnl_manager.c.o"
   "CMakeFiles/Lem_in.dir/lm_ant_manager.c.o"
   "CMakeFiles/Lem_in.dir/lm_bahram.c.o"
@@ -8,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lem_in.dir/lm_link_manager.c.o"
   "CMakeFiles/Lem_in.dir/lm_parcer_links.c.o"
   "CMakeFiles/Lem_in.dir/lm_parcer_rooms.c.o"
+  "CMakeFiles/Lem_in.dir/lm_useful3.c.o"
   "CMakeFiles/Lem_in.dir/lm_usefull.c.o"
   "CMakeFiles/Lem_in.dir/lm_usefull2.c.o"
   "CMakeFiles/Lem_in.dir/lm_way_finder.c.o"
