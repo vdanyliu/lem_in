@@ -57,6 +57,18 @@ void		lm_print_belong(t_lem *lem)
 	}
 }
 
+void		lm_free_t_wroom_copy(t_wroom *ways)
+{
+	t_wroom	*buff;
+
+	while (ways)
+	{
+		buff = ways;
+		ways = ways->nextlist;
+		lm_free_t_wroom(buff);
+	}
+}
+
 int 		lm_bahram(t_lem *lem)
 {
 	int		pre;
@@ -77,7 +89,7 @@ int 		lm_bahram(t_lem *lem)
 			lem->ways = copy;
 			return (0);
 		}
-		lm_free_t_wroom(copy);
+		lm_free_t_wroom_copy(copy);
 		lm_bahram_room_link_to_way(lem);
 	}
 	return (0);

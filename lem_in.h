@@ -79,6 +79,7 @@ typedef struct		s_lem_in
 
 int 				g_turns;
 int 				g_debug;
+int					g_required;
 void				lm_error(int i);
 t_lem				*lm_create_lem(void);
 void				lm_add(char *gnl, t_lem *lem, int mod);

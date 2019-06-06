@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/05 13:12:18 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/06 20:00:29 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,7 @@ int				main(void)
 	lm_find_ways(lem_in);
 	//lm_debug_print_ways(lem_in->ways);
 	lm_ant_manager(lem_in);
+	ft_printf("%s\n", lem_in->gnl->next->gnl);
 	ft_printf("turn = %i\ncalc turn = %i\n", g_turns, (lem_in->ways->load - 1));
 	//system("leaks -q Lem_in");
 	return (0);
