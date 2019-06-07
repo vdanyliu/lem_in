@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-int 	all_is_num(char *str)
+int					all_is_num(char *str)
 {
 	if (*str == '-')
 		str++;
@@ -28,7 +28,7 @@ int 	all_is_num(char *str)
 	return (1);
 }
 
-void	lm_free_split(char **str)
+void				lm_free_split(char **str)
 {
 	char	**buff;
 
@@ -66,7 +66,8 @@ t_bfs				*lm_new_bfs_list(t_room *parent, t_room *curr)
 	return (new);
 }
 
-void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room, int i)
+void				lm_bfs_add_node(t_bfs *head, t_room *from, t_room *room,
+		int i)
 {
 	static t_bfs *curr = NULL;
 

@@ -6,46 +6,16 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 14:06:25 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/03 14:11:16 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/07 15:20:22 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-t_ants	*lm_create_ants(long num)
-{
-	t_ants	*head;
-	t_ants	*curr;
-
-	head = NULL;
-	curr = NULL;
-	while (num)
-	{
-		if (!head)
-		{
-			head = (t_ants*)malloc(sizeof(t_ants));
-			head->pre = NULL;
-			head->ant_num = 1;
-			curr = head;
-			num--;
-		}
-		else
-		{
-			curr->next = (t_ants *) malloc(sizeof(t_ants));
-			curr->next->ant_num = curr->ant_num + 1;
-			curr->next->pre = curr;
-			curr = curr->next;
-			num--;
-		}
-	}
-	curr->next = NULL;
-	return (head);
-}
-
 static t_wroom	*lm_take_way(t_wroom *ways)
 {
 	t_wroom	*curr_choice;
-	int 	i;
+	int		i;
 
 	curr_choice = ways;
 	i = curr_choice->load;
@@ -60,19 +30,19 @@ static t_wroom	*lm_take_way(t_wroom *ways)
 	return (curr_choice);
 }
 
-void		lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem)
+void			lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem)
 {
 	lm_way_len(lem->ways);
 	while (ants_list)
 	{
 		ants_list->way = lm_take_way(ways);
 		ants_list->curr = ants_list->way->list->room;
-		ants_list->l_way =  ants_list->way->list;
+		ants_list->l_way = ants_list->way->list;
 		ants_list = ants_list->next;
 	}
 }
 
-int 			lm_room_free(t_ants *ants, t_room *room, t_room *finish)
+int				lm_room_free(t_ants *ants, t_room *room, t_room *finish)
 {
 	while (ants)
 	{
@@ -86,39 +56,34 @@ int 			lm_room_free(t_ants *ants, t_room *room, t_room *finish)
 static void		lm_move_ants(t_ants *ants, t_lem *lem)
 {
 	t_ants	*buff;
-	int 	i;
+	int		i;
 
 	while (42)
 	{
-		g_turns++;
 		i = 0;
 		buff = ants;
 		while (buff)
 		{
-			if (buff->l_way->next && lm_room_free(ants, buff->l_way->next->room, lem->finish))
+			if (buff->l_way->next && lm_room_free(ants, buff->l_way->next->room,
+					lem->finish))
 			{
-				write(1, " ", 1);
 				buff->curr = buff->l_way->next->room;
 				buff->l_way = buff->l_way->next;
-				ft_printf("L%i-%s", buff->ant_num, buff->curr->name);
-				i++;
+				i++ != 0 ? ft_printf(" L%i-%s", buff->ant_num, buff->curr->name)
+				: ft_printf("L%i-%s", buff->ant_num, buff->curr->name);
 			}
 			buff = buff->next;
 		}
-		write(1, "\n", 1);
 		if (!i)
-		{
-			g_turns--;
-			return;
-		}
+			return ;
+		g_turns++;
+		write(1, "\n", 1);
 	}
 }
 
-void		lm_ant_manager(t_lem *lem)
+void			lm_ant_manager(t_lem *lem)
 {
 	g_turns = 0;
-	//lem->ants = lm_create_ants(lem->ants_numb);
-	//lm_ants_ways(lem->ants, lem->ways);
 	lm_ants_ways(lem->ants, lem->ways, lem);
 	lm_move_ants(lem->ants, lem);
 }

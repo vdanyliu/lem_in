@@ -48,7 +48,7 @@ static t_lroom	*lm_found_same_up(t_wroom *head, t_room *room)
 	exit(66);
 }
 
-static void	lm_free_lway(t_lroom *from, t_lroom *to)
+static void		lm_free_lway(t_lroom *from, t_lroom *to)
 {
 	t_lroom	*buff;
 
@@ -60,7 +60,7 @@ static void	lm_free_lway(t_lroom *from, t_lroom *to)
 	}
 }
 
-void	lm_bahram_fix_ways(t_lem *lem)
+void			lm_bahram_fix_ways(t_lem *lem)
 {
 	t_lroom	*l_same_up;
 	t_lroom	*f_same_up;
@@ -76,7 +76,7 @@ void	lm_bahram_fix_ways(t_lem *lem)
 		f_same_up->pre->next = l_same_down;
 		l_same_down->pre = f_same_up->pre;
 		f_same_down->pre->next = l_same_up;
-		l_same_up ->pre = f_same_down->pre;
+		l_same_up->pre = f_same_down->pre;
 		lm_free_lway(f_same_up, l_same_up);
 		lm_free_lway(f_same_down, l_same_down);
 		g_debug++;

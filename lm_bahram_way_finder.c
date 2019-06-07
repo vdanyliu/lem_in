@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:46:19 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/05 20:13:41 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/06 20:40:58 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_room				*lm_pre_room_in_way(t_room *room)
 	return (0);
 }
 
-static int 			lm_flag_select(t_room *room, t_bfs *head, t_bfs *pre)
+static int			lm_flag_select(t_room *room, t_bfs *head, t_bfs *pre)
 {
 	while (head)
 	{
@@ -52,7 +52,7 @@ static int 			lm_flag_select(t_room *room, t_bfs *head, t_bfs *pre)
 	}
 	if (pre && pre->flags == 1 && lm_pre_room_in_way(pre->room) != room)
 		return (-1);
-	if (pre && pre->flags == 0 && lm_next_room_in_way(pre->room) == room) // maybe we dont need it
+	if (pre && pre->flags == 0 && lm_next_room_in_way(pre->room) == room)
 		return (-1);
 	if (room->belong_to)
 	{
@@ -64,7 +64,8 @@ static int 			lm_flag_select(t_room *room, t_bfs *head, t_bfs *pre)
 	return (0);
 }
 
-static void			lm_bfs_add_node_bahram(t_bfs *head, t_room *from, t_room *room, int flag)
+static void			lm_bfs_add_node_bahram(t_bfs *head, t_room *from,
+		t_room *room, int flag)
 {
 	if (flag < 0)
 		return ;
@@ -80,7 +81,7 @@ t_wroom				*lm_find_way_bahram(t_lem *lem)
 	t_bfs	*head;
 	t_bfs	*curr;
 	t_lroom	*curr_link;
-	int 	flag;
+	int		flag;
 
 	head = lm_new_bfs_list(lem->start, lem->start);
 	curr = head;

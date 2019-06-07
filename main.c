@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/06 20:00:29 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/07 15:12:48 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void			lm_parce_ants(char *gnl, long *ant_num)
 {
 	long	i;
+
 	if (*gnl == '0' || !all_is_num(gnl))
 		lm_error(66);
 	i = ft_atoi(gnl);
@@ -65,13 +66,12 @@ static void		lm_hesh_parcer(char *gnl, t_lem *lem)
 		lm_add_gnl(lem->gnl, gnl);
 }
 
-static void 	lm_parcer(t_lem *lem)
+static void		lm_parcer(t_lem *lem)
 {
 	char	*gnl;
 
-	while(get_next_line(0, &gnl) > 0)
+	while (get_next_line(0, &gnl) > 0)
 	{
-
 		if (*gnl == 0 || *gnl == 'L')
 			lm_error(0);
 		else if (*gnl == '#')
@@ -84,50 +84,22 @@ static void 	lm_parcer(t_lem *lem)
 	if (!lem->start || !lem->finish)
 		lm_error(11);
 	free(gnl);
-	ft_printf("END OF PARCER\n");
-
 }
 
-
-void			lm_print_links(t_lem *lem) //debug
+int				main(int ac, char **av)
 {
-	t_room	*room;
-	t_lroom	*link;
+	t_lem	*lem;
 
-	room = lem->rooms;
-	while(room)
+	lem = lm_create_lem();
+	lm_parcer(lem);
+	lm_find_ways(lem);
+	lm_print_gnl((lem)->gnl);
+	lm_ant_manager(lem);
+	if (*lem->gnl->next->gnl == '#' && *(lem->gnl->next->gnl + 1) != '#' &&
+	ac > 1 && av[1][0] == '-')
 	{
-		link = room->link;
-		ft_printf("num = %i, name = %s links :\n", room->num, room->name);
-		while(link->next)
-		{
-			ft_printf("|num = %i, name = %s|\t", link->room->num, link->room->name);
-			link = link->next;
-		}
-		ft_printf("|num = %i, name = %s|\n", link->room->num, link->room->name);
-		room = room->next;
+		ft_printf("%s\n", lem->gnl->next->gnl);
+		ft_printf("#Here is the number of lines by my lem: %i\n", g_turns);
 	}
-	ft_printf("\n\n\n");
-}
-
-static void		lm_initiation(t_lem **lem_in)
-{
-	*lem_in = lm_create_lem();
-	lm_parcer(*lem_in);
-	lm_print_gnl((*lem_in)->gnl);
-}
-
-int				main(void)
-{
-	t_lem	*lem_in;
-
-	lem_in = NULL;
-	lm_initiation(&lem_in);
-	lm_find_ways(lem_in);
-	//lm_debug_print_ways(lem_in->ways);
-	lm_ant_manager(lem_in);
-	ft_printf("%s\n", lem_in->gnl->next->gnl);
-	ft_printf("turn = %i\ncalc turn = %i\n", g_turns, (lem_in->ways->load - 1));
-	//system("leaks -q Lem_in");
 	return (0);
 }

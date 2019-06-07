@@ -6,11 +6,24 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:13:24 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/06 15:29:24 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/07 13:59:44 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
+static t_lroom	*lm_norrminate_fix(t_lroom *down_lroom, t_lroom *curr_lroom,
+		t_lem *lem)
+{
+	while (down_lroom)
+	{
+		if (down_lroom->room == curr_lroom->room
+		&& down_lroom->room != lem->start && down_lroom->room != lem->finish)
+			return (down_lroom);
+		down_lroom = down_lroom->next;
+	}
+	return (0);
+}
 
 t_lroom			*lm_check_way_same_node(t_wroom *head, t_lem *lem)
 {
@@ -27,12 +40,8 @@ t_lroom			*lm_check_way_same_node(t_wroom *head, t_lem *lem)
 			while (curr_wroom)
 			{
 				down_lroom = curr_wroom->list;
-				while (down_lroom)
-				{
-					if (down_lroom->room == curr_lroom->room && down_lroom->room != lem->start && down_lroom->room != lem->finish)
-						return (down_lroom);
-					down_lroom = down_lroom->next;
-				}
+				if (lm_norrminate_fix(down_lroom, curr_lroom, lem))
+					return (lm_norrminate_fix(down_lroom, curr_lroom, lem));
 				curr_wroom = curr_wroom->nextlist;
 			}
 			curr_lroom = curr_lroom->next;
@@ -88,8 +97,6 @@ t_wroom			*lm_copy_way(t_wroom *origin)
 		if (head == NULL)
 		{
 			head = (t_wroom*)malloc(sizeof(t_wroom));
-			head->len = origin->len;
-			head->load = origin->load;
 			head->list = lm_copy_lway(origin->list);
 			head->nextlist = NULL;
 			curr = head;
@@ -98,8 +105,6 @@ t_wroom			*lm_copy_way(t_wroom *origin)
 		}
 		curr->nextlist = (t_wroom*)malloc(sizeof(t_wroom));
 		curr = curr->nextlist;
-		curr->len = origin->len;
-		curr->load = origin->load;
 		curr->list = lm_copy_lway(origin->list);
 		curr->nextlist = NULL;
 		origin = origin->nextlist;

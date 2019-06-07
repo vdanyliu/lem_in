@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 16:59:58 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/06 18:00:31 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/07 14:08:07 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ void				lm_free_bfs(t_bfs *bfs)
 	}
 }
 
-int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem)
+int					lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways,
+		t_lem *lem)
 {
 	t_lroom	*head_list;
 
@@ -95,7 +96,7 @@ int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem)
 	return (0);
 }
 
-int 				lm_calc_turns(t_lem *lem)
+int					lm_calc_turns(t_lem *lem)
 {
 	int		i;
 	t_ants	*ants;
@@ -109,6 +110,5 @@ int 				lm_calc_turns(t_lem *lem)
 			i = ants->way->load;
 		ants = ants->next;
 	}
-	//ft_printf("turns calc = %i\n", i);
 	return (i);
 }

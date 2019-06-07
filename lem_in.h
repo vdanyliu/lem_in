@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 13:54:59 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/06 15:29:24 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/07 14:23:26 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ typedef struct		s_lem_in
 
 int 				g_turns;
 int 				g_debug;
-int					g_required;
 void				lm_error(int i);
 t_lem				*lm_create_lem(void);
 void				lm_add(char *gnl, t_lem *lem, int mod);
@@ -99,8 +98,6 @@ int 				lm_check_stack(t_bfs *head, t_room *room, t_wroom *ways, t_lem *lem);
 void				lm_free_way(t_lem *lem);
 int 				lm_bahram(t_lem *lem);
 void				lm_create_link(t_room *room1, t_room *room2);
-void				lm_print_links(t_lem *lem);
-void				lm_debug_print_ways(t_wroom *ways);
 void				lm_way_len(t_wroom *ways);
 void				lm_ant_manager(t_lem *lem);
 int 				lm_room_free(t_ants *ants, t_room *room, t_room *finish);
@@ -114,5 +111,6 @@ t_wroom				*lm_copy_way(t_wroom *origin);
 void				lm_add_way(t_wroom *origin, t_wroom *to_end);
 void				lm_bahram_fix_ways(t_lem *lem);
 t_lroom				*lm_check_way_same_node(t_wroom *head, t_lem *lem);
+t_bfs				*lm_find_parent(t_bfs *head, t_room *room);
 
 #endif

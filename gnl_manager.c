@@ -30,7 +30,7 @@ void			lm_add_gnl(t_gnl_buff *gnl_lst, char *gnl)
 	}
 }
 
-void				lm_print_gnl(t_gnl_buff *gnl_lst)
+void			lm_print_gnl(t_gnl_buff *gnl_lst)
 {
 	while (gnl_lst)
 	{

@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-void			lm_create_link(t_room *room1, t_room *room2)
+void				lm_create_link(t_room *room1, t_room *room2)
 {
 	t_lroom	*buff;
 
@@ -56,7 +56,7 @@ static void			lm_add_link(t_lem *lem, char *r1, char *r2)
 	lm_create_link(room2, room1);
 }
 
-void			lm_parce_link(char *gnl, t_lem *lem)
+void				lm_parce_link(char *gnl, t_lem *lem)
 {
 	char	**split;
 
