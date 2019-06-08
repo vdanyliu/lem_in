@@ -1,0 +1,60 @@
+Norme: ./bahram_way_fixer.c
+Norme: ./gnl_manager.c
+Norme: ./lm_create_lem.c
+Norme: ./lm_ant_manager.c
+Norme: ./lm_bahram.c
+Norme: ./lm_link_manager.c
+Norme: ./lm_error.c
+Norme: ./lm_bahram_way_finder.c
+Norme: ./lm_parcer_links.c
+Norme: ./lm_depth_calc.c
+Error: file must end with a single empty line
+Error: global scope bad aligned
+Error (line 15): function lm_create_list has 28 lines
+Error (line 114, col 0): no newline after block
+Norme: ./lm_parcer_rooms.c
+Norme: ./lm_usefull.c
+Norme: ./lm_useful3.c
+Norme: ./lm_print_mlx.c
+Error: file must end with a single empty line
+Error: global scope bad aligned
+Error: 7 functions in the file
+Error (line 15): declarations in dda are bad aligned
+Error (line 15, col 0): dda has 6 variables
+Error (line 25): missing newline after if
+Error (line 25): 2 instructions
+Error (line 25): bad indentation
+Error (line 26, col 43): missing space around /
+Error (line 27, col 43): missing space around /
+Error (line 30): for detected
+Error (line 30): 2 instructions
+Error (line 30, col 14): missing space around <=
+Error (line 30, col 23): bad character after ;
+Error (line 38): Bad spacing for argument room
+Error (line 38): line has 88 characters
+Error (line 47): Bad spacing for argument img
+Error (line 65): Bad spacing for argument img
+Error (line 69, col 4): bad spacing
+Error (line 91): Space before function name
+Error (line 91, col 11): bad spacing
+Error (line 132): line has 82 characters
+Error (line 134, col 0): no newline after block
+Norme: ./mlx_ini.c
+Error (line 15): bad spacing after mlx_ptr_init
+Error (line 24): bad spacing before mlx_initiation
+Norme: ./lm_usefull2.c
+Norme: ./lm_way_finder.c
+Error (line 93): C++ comment
+Error (line 93): bad indentation
+Norme: ./main.c
+Error: global scope bad aligned
+Error: 10 functions in the file
+Error (line 15): multiple empty lines
+Error (line 16): bad spacing before key_release
+Error (line 30): bad spacing after fdf_mlx_manipulation
+Error (line 36): multiple empty lines
+Error (line 37): bad spacing before lm_parce_ants
+Error (line 114, col 4): bad spacing
+Error (line 150): C++ comment
+Error (line 152): C++ comment
+Error (line 154): C++ comment

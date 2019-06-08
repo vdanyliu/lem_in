@@ -1,0 +1,4 @@
+/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir
+/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/ft.dir
