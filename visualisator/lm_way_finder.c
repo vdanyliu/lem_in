@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 15:35:50 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/08 13:25:13 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:00:35 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void			lm_find_all_ways(t_lem *lem)
 	last = lem->ways;
 	while ((buff = lm_bfs(lem, lem->start, lem->finish)) != 0)
 	{
-		//lm_print_mlx(lem);
+		lm_print_mlx(lem);
 		pre = lm_calc_turns(lem);
 		last->nextlist = buff;
 		if (pre <= lm_calc_turns(lem))

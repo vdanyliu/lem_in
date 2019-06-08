@@ -78,6 +78,7 @@ int			lm_bahram(t_lem *lem)
 		}
 		lm_free_t_wroom_copy(copy);
 		lm_bahram_room_link_to_way(lem);
+		lm_print_mlx(lem);
 	}
 	return (0);
 }

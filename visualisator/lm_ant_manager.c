@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 14:06:25 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 15:20:22 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/08 16:03:53 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,10 @@ void			lm_ants_ways(t_ants *ants_list, t_wroom *ways, t_lem *lem)
 	}
 }
 
-int				lm_room_free(t_ants *ants, t_room *room, t_room *finish)
+int				lm_room_free(t_ants *ants, t_room *room, t_room *finish,
+		t_ants *end)
 {
-	while (ants)
+	while (ants && ants != end)
 	{
 		if (ants->curr == room && room != finish)
 			return (0);
@@ -65,7 +66,7 @@ static void		lm_move_ants(t_ants *ants, t_lem *lem)
 		while (buff)
 		{
 			if (buff->l_way->next && lm_room_free(ants, buff->l_way->next->room,
-					lem->finish))
+					lem->finish, buff))
 			{
 				buff->curr = buff->l_way->next->room;
 				buff->l_way = buff->l_way->next;

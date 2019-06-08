@@ -13,6 +13,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_depth_calc.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_depth_calc.c.o"
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_error.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_error.c.o"
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o"
+  "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_norme.c.o"
+  "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme1.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_norme1.c.o"
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_parcer_links.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o"
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_parcer_rooms.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o"
   "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_print_mlx.c" "/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o"

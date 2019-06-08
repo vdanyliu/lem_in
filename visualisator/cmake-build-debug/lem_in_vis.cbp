@@ -389,6 +389,12 @@
 		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c">
 			<Option target="lem_in_vis"/>
 		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme.c">
+			<Option target="lem_in_vis"/>
+		</Unit>
+		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme1.c">
+			<Option target="lem_in_vis"/>
+		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_parcer_links.c">
 			<Option target="lem_in_vis"/>
 		</Unit>

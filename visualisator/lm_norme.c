@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mlx_ini.c                                          :+:      :+:    :+:   */
+/*   lm_norme.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 19:09:53 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 19:11:34 by vdanyliu         ###   ########.fr       */
+/*   Created: 2019/06/08 15:21:42 by vdanyliu          #+#    #+#             */
+/*   Updated: 2019/06/08 15:22:19 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static t_mlx_ptr	*mlx_ptr_init(void)
+static void				lm_mlx_print_room(t_room *room, int *img)
 {
-	t_mlx_ptr	*mlx_ptrs;
+	int	x;
+	int	y;
+	int	dx;
+	int	dy;
 
-	mlx_ptrs = (t_mlx_ptr*)(malloc)(sizeof(*mlx_ptrs));
-	mlx_ptrs->mlx_ptr = mlx_init();
-	mlx_ptrs->win_ptr = mlx_new_window(mlx_ptrs->mlx_ptr, 4000, 3000, "Filler");
-	return (mlx_ptrs);
+	x = room->x - 5;
+	y = room->y - 5;
+	dy = 0;
+	while (dy < 10)
+	{
+		dx = 0;
+		while (dx < 10)
+		{
+			img[((int)x + dx) + (((int)y + dy) * 4000)] = 0xff0000;
+			dx++;
+		}
+		dy++;
+	}
 }
 
-t_mlx_ptr			*mlx_initiation(void)
+void					lm_print_s_f(t_lem *lem, int *img)
 {
-	t_mlx_ptr		*mlx;
-
-	mlx = mlx_ptr_init();
-	return (mlx);
+	lm_mlx_print_room(lem->start, img);
+	lm_mlx_print_room(lem->finish, img);
 }

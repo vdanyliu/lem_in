@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 14:14:31 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 14:20:18 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/08 15:16:00 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,15 @@ void			lm_free_t_wroom(t_wroom *buff)
 		free(pre);
 	}
 	free(buff);
+}
+
+t_lroom			*getlroom(const t_lroom *links)
+{
+	t_lroom *head;
+
+	head = (t_lroom*)malloc(sizeof(t_lroom));
+	head->room = links->room;
+	head->room->depth = 10;
+	head->next = NULL;
+	return (head);
 }

@@ -46,6 +46,16 @@ CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o: ../libft/src/ft_printf.h
 CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o: ../libft/src/libft.h
 CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o: ../lm_link_manager.c
 
+CMakeFiles/lem_in_vis.dir/lm_norme.c.o: ../lem_in.h
+CMakeFiles/lem_in_vis.dir/lm_norme.c.o: ../libft/src/ft_printf.h
+CMakeFiles/lem_in_vis.dir/lm_norme.c.o: ../libft/src/libft.h
+CMakeFiles/lem_in_vis.dir/lm_norme.c.o: ../lm_norme.c
+
+CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: ../lem_in.h
+CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: ../libft/src/ft_printf.h
+CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: ../libft/src/libft.h
+CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: ../lm_norme1.c
+
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o: ../lem_in.h
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o: ../libft/src/ft_printf.h
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o: ../libft/src/libft.h

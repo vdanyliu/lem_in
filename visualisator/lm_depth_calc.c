@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:43:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 18:47:00 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/08 15:16:00 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ static t_lroom	*lm_create_list(t_lroom *links)
 		{
 			if (!head)
 			{
-				head = (t_lroom*)malloc(sizeof(t_lroom));
-				head->room = links->room;
-				head->room->depth = 10;
-				head->next = NULL;
+				head = getlroom(links);
 				curr = head;
 			}
 			else
@@ -76,7 +73,7 @@ static t_depth	*lm_add_depth(t_lroom *list, int i)
 	return (head);
 }
 
-int			lm_mark_depth(t_lroom *curr, int i)
+int				lm_mark_depth(t_lroom *curr, int i)
 {
 	int	j;
 
@@ -90,7 +87,7 @@ int			lm_mark_depth(t_lroom *curr, int i)
 	return (j);
 }
 
-void		lm_calc_depth(t_lem *lem)
+void			lm_calc_depth(t_lem *lem)
 {
 	t_depth	*head;
 	t_depth	*curr;
