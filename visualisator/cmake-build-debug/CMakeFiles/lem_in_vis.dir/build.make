@@ -161,22 +161,9 @@ CMakeFiles/lem_in_vis.dir/lm_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in_vis.dir/lm_error.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_error.c" -o CMakeFiles/lem_in_vis.dir/lm_error.c.s
 
-CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o: CMakeFiles/lem_in_vis.dir/flags.make
-CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o: ../lm_link_manager.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c"
-
-CMakeFiles/lem_in_vis.dir/lm_link_manager.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in_vis.dir/lm_link_manager.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c" > CMakeFiles/lem_in_vis.dir/lm_link_manager.c.i
-
-CMakeFiles/lem_in_vis.dir/lm_link_manager.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in_vis.dir/lm_link_manager.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c" -o CMakeFiles/lem_in_vis.dir/lm_link_manager.c.s
-
 CMakeFiles/lem_in_vis.dir/lm_norme.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_norme.c.o: ../lm_norme.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lem_in_vis.dir/lm_norme.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lem_in_vis.dir/lm_norme.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_norme.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme.c"
 
 CMakeFiles/lem_in_vis.dir/lm_norme.c.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/lem_in_vis.dir/lm_norme.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_norme1.c.o: ../lm_norme1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lem_in_vis.dir/lm_norme1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lem_in_vis.dir/lm_norme1.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_norme1.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme1.c"
 
 CMakeFiles/lem_in_vis.dir/lm_norme1.c.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/lem_in_vis.dir/lm_norme1.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o: ../lm_parcer_links.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_parcer_links.c"
 
 CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o: ../lm_parcer_rooms.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_parcer_rooms.c"
 
 CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.i: cmake_force
@@ -228,7 +215,7 @@ CMakeFiles/lem_in_vis.dir/lm_parcer_rooms.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o: ../lm_print_mlx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_print_mlx.c"
 
 CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/lem_in_vis.dir/lm_print_mlx.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_useful3.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_useful3.c.o: ../lm_useful3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/lem_in_vis.dir/lm_useful3.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/lem_in_vis.dir/lm_useful3.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_useful3.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_useful3.c"
 
 CMakeFiles/lem_in_vis.dir/lm_useful3.c.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/lem_in_vis.dir/lm_useful3.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_usefull.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_usefull.c.o: ../lm_usefull.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/lem_in_vis.dir/lm_usefull.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/lem_in_vis.dir/lm_usefull.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_usefull.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_usefull.c"
 
 CMakeFiles/lem_in_vis.dir/lm_usefull.c.i: cmake_force
@@ -267,7 +254,7 @@ CMakeFiles/lem_in_vis.dir/lm_usefull.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_usefull2.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_usefull2.c.o: ../lm_usefull2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/lem_in_vis.dir/lm_usefull2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/lem_in_vis.dir/lm_usefull2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_usefull2.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_usefull2.c"
 
 CMakeFiles/lem_in_vis.dir/lm_usefull2.c.i: cmake_force
@@ -280,7 +267,7 @@ CMakeFiles/lem_in_vis.dir/lm_usefull2.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/lm_way_finder.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/lm_way_finder.c.o: ../lm_way_finder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/lem_in_vis.dir/lm_way_finder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/lem_in_vis.dir/lm_way_finder.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/lm_way_finder.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_way_finder.c"
 
 CMakeFiles/lem_in_vis.dir/lm_way_finder.c.i: cmake_force
@@ -293,7 +280,7 @@ CMakeFiles/lem_in_vis.dir/lm_way_finder.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/main.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/lem_in_vis.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/lem_in_vis.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/main.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/main.c"
 
 CMakeFiles/lem_in_vis.dir/main.c.i: cmake_force
@@ -306,7 +293,7 @@ CMakeFiles/lem_in_vis.dir/main.c.s: cmake_force
 
 CMakeFiles/lem_in_vis.dir/mlx_ini.c.o: CMakeFiles/lem_in_vis.dir/flags.make
 CMakeFiles/lem_in_vis.dir/mlx_ini.c.o: ../mlx_ini.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/lem_in_vis.dir/mlx_ini.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/lem_in_vis.dir/mlx_ini.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_vis.dir/mlx_ini.c.o   -c "/Users/vdanyliu/Desktop/project lem_in/visualisator/mlx_ini.c"
 
 CMakeFiles/lem_in_vis.dir/mlx_ini.c.i: cmake_force
@@ -327,7 +314,6 @@ lem_in_vis_OBJECTS = \
 "CMakeFiles/lem_in_vis.dir/lm_create_lem.c.o" \
 "CMakeFiles/lem_in_vis.dir/lm_depth_calc.c.o" \
 "CMakeFiles/lem_in_vis.dir/lm_error.c.o" \
-"CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o" \
 "CMakeFiles/lem_in_vis.dir/lm_norme.c.o" \
 "CMakeFiles/lem_in_vis.dir/lm_norme1.c.o" \
 "CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o" \
@@ -351,7 +337,6 @@ lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_bahram_way_finder.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_create_lem.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_depth_calc.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_error.c.o
-lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_link_manager.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_norme.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_norme1.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/lm_parcer_links.c.o
@@ -366,7 +351,7 @@ lem_in_vis: CMakeFiles/lem_in_vis.dir/mlx_ini.c.o
 lem_in_vis: CMakeFiles/lem_in_vis.dir/build.make
 lem_in_vis: libft.a
 lem_in_vis: CMakeFiles/lem_in_vis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable lem_in_vis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/vdanyliu/Desktop/project lem_in/visualisator/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable lem_in_vis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in_vis.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

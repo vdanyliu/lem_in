@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vdanyliu/Desktop/lem_in
+CMAKE_SOURCE_DIR = "/Users/vdanyliu/Desktop/project lem_in/lem_in"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vdanyliu/Desktop/lem_in/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/vdanyliu/Desktop/project lem_in/lem_in/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles /Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/vdanyliu/Desktop/project lem_in/lem_in/cmake-build-debug/CMakeFiles" "/Users/vdanyliu/Desktop/project lem_in/lem_in/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vdanyliu/Desktop/lem_in/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/vdanyliu/Desktop/project lem_in/lem_in/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -2377,6 +2377,33 @@ lm_bahram_way_finder.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.s
 .PHONY : lm_bahram_way_finder.c.s
 
+lm_bonus.o: lm_bonus.c.o
+
+.PHONY : lm_bonus.o
+
+# target to build an object file
+lm_bonus.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bonus.c.o
+.PHONY : lm_bonus.c.o
+
+lm_bonus.i: lm_bonus.c.i
+
+.PHONY : lm_bonus.i
+
+# target to preprocess a source file
+lm_bonus.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bonus.c.i
+.PHONY : lm_bonus.c.i
+
+lm_bonus.s: lm_bonus.c.s
+
+.PHONY : lm_bonus.s
+
+# target to generate assembly for a file
+lm_bonus.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_bonus.c.s
+.PHONY : lm_bonus.c.s
+
 lm_create_lem.o: lm_create_lem.c.o
 
 .PHONY : lm_create_lem.o
@@ -2430,33 +2457,6 @@ lm_error.s: lm_error.c.s
 lm_error.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_error.c.s
 .PHONY : lm_error.c.s
-
-lm_link_manager.o: lm_link_manager.c.o
-
-.PHONY : lm_link_manager.o
-
-# target to build an object file
-lm_link_manager.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_link_manager.c.o
-.PHONY : lm_link_manager.c.o
-
-lm_link_manager.i: lm_link_manager.c.i
-
-.PHONY : lm_link_manager.i
-
-# target to preprocess a source file
-lm_link_manager.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_link_manager.c.i
-.PHONY : lm_link_manager.c.i
-
-lm_link_manager.s: lm_link_manager.c.s
-
-.PHONY : lm_link_manager.s
-
-# target to generate assembly for a file
-lm_link_manager.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/lm_link_manager.c.s
-.PHONY : lm_link_manager.c.s
 
 lm_parcer_links.o: lm_parcer_links.c.o
 
@@ -2906,15 +2906,15 @@ help:
 	@echo "... lm_bahram_way_finder.o"
 	@echo "... lm_bahram_way_finder.i"
 	@echo "... lm_bahram_way_finder.s"
+	@echo "... lm_bonus.o"
+	@echo "... lm_bonus.i"
+	@echo "... lm_bonus.s"
 	@echo "... lm_create_lem.o"
 	@echo "... lm_create_lem.i"
 	@echo "... lm_create_lem.s"
 	@echo "... lm_error.o"
 	@echo "... lm_error.i"
 	@echo "... lm_error.s"
-	@echo "... lm_link_manager.o"
-	@echo "... lm_link_manager.i"
-	@echo "... lm_link_manager.s"
 	@echo "... lm_parcer_links.o"
 	@echo "... lm_parcer_links.i"
 	@echo "... lm_parcer_links.s"

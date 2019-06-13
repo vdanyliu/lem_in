@@ -15,6 +15,7 @@
 void			lm_error(int i)
 {
 	ft_printf("ERROR\n");
+	system("leaks -q Lem_in");
 	exit(i);
 }
 

@@ -26,6 +26,11 @@ CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../libft/src/libft.h
 CMakeFiles/Lem_in.dir/lm_bahram_way_finder.c.o: ../lm_bahram_way_finder.c
 
+CMakeFiles/Lem_in.dir/lm_bonus.c.o: ../lem_in.h
+CMakeFiles/Lem_in.dir/lm_bonus.c.o: ../libft/src/ft_printf.h
+CMakeFiles/Lem_in.dir/lm_bonus.c.o: ../libft/src/libft.h
+CMakeFiles/Lem_in.dir/lm_bonus.c.o: ../lm_bonus.c
+
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_create_lem.c.o: ../libft/src/libft.h
@@ -35,11 +40,6 @@ CMakeFiles/Lem_in.dir/lm_error.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_error.c.o: ../libft/src/ft_printf.h
 CMakeFiles/Lem_in.dir/lm_error.c.o: ../libft/src/libft.h
 CMakeFiles/Lem_in.dir/lm_error.c.o: ../lm_error.c
-
-CMakeFiles/Lem_in.dir/lm_link_manager.c.o: ../lem_in.h
-CMakeFiles/Lem_in.dir/lm_link_manager.c.o: ../libft/src/ft_printf.h
-CMakeFiles/Lem_in.dir/lm_link_manager.c.o: ../libft/src/libft.h
-CMakeFiles/Lem_in.dir/lm_link_manager.c.o: ../lm_link_manager.c
 
 CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../lem_in.h
 CMakeFiles/Lem_in.dir/lm_parcer_links.c.o: ../libft/src/ft_printf.h

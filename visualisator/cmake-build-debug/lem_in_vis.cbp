@@ -386,9 +386,6 @@
 		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_error.c">
 			<Option target="lem_in_vis"/>
 		</Unit>
-		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_link_manager.c">
-			<Option target="lem_in_vis"/>
-		</Unit>
 		<Unit filename="/Users/vdanyliu/Desktop/project lem_in/visualisator/lm_norme.c">
 			<Option target="lem_in_vis"/>
 		</Unit>

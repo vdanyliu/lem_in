@@ -100,7 +100,7 @@ void			lm_find_all_ways(t_lem *lem)
 		}
 		last = last->nextlist;
 	}
-	lm_bahram(lem);
+	g_no_bahra == 0 ? lm_bahram(lem) : 0;
 }
 
 void			lm_find_ways(t_lem *lem)

@@ -98,5 +98,6 @@ t_wroom				*lm_find_way_bahram(t_lem *lem)
 		}
 		curr = curr->next;
 	}
+	lm_free_bfs(head);
 	return (0);
 }

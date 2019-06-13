@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 16:35:40 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/06 20:29:18 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/13 19:26:23 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ t_lem		*lm_create_lem(void)
 	head->gnl = (t_gnl_buff*)malloc(sizeof(t_gnl_buff));
 	head->ways = NULL;
 	head->ants = NULL;
+	g_rooms = 0;
+	g_ways = 0;
+	g_no_bahra = 0;
 	return (head);
 }

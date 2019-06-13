@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:51:20 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 13:33:39 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/13 19:58:13 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int			lm_bahram(t_lem *lem)
 		pre = lm_calc_turns(lem);
 		lm_add_way(lem->ways, way);
 		lm_bahram_fix_ways(lem);
+		lm_bahram_room_link_to_way(lem);
 		if (pre < lm_calc_turns(lem))
 		{
 			lm_free_way(lem);
@@ -77,7 +78,6 @@ int			lm_bahram(t_lem *lem)
 			return (0);
 		}
 		lm_free_t_wroom_copy(copy);
-		lm_bahram_room_link_to_way(lem);
 	}
 	return (0);
 }

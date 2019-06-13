@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:31:22 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/07 15:12:48 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/13 19:11:27 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,15 +91,17 @@ int				main(int ac, char **av)
 	t_lem	*lem;
 
 	lem = lm_create_lem();
+	ac != 1 ?  lm_parce_av(av[1]) : 0;
 	lm_parcer(lem);
 	lm_find_ways(lem);
 	lm_print_gnl((lem)->gnl);
 	lm_ant_manager(lem);
-	if (*lem->gnl->next->gnl == '#' && *(lem->gnl->next->gnl + 1) != '#' &&
-	ac > 1 && av[1][0] == '-')
+	if (ac > 1 && av[1][0] == '-')
 	{
-		ft_printf("%s\n", lem->gnl->next->gnl);
+		if (*lem->gnl->next->gnl == '#' && *(lem->gnl->next->gnl + 1) != '#')
+			ft_printf("%s\n", lem->gnl->next->gnl);
 		ft_printf("#Here is the number of lines by my lem: %i\n", g_turns);
 	}
+	lm_bonus_print(lem);
 	return (0);
 }
