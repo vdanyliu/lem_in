@@ -6,7 +6,7 @@
 /*   By: vdanyliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 19:13:42 by vdanyliu          #+#    #+#             */
-/*   Updated: 2019/06/13 20:07:47 by vdanyliu         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:43:21 by vdanyliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void					lm_parce_av(char *str)
 	{
 		ft_printf("usage : lem-in (arg) < map.txt\n'-' print number of lines\n"
 			"'r' - print all rooms\n'w' - print all ways\n"
-   "'b' - do without superposition\n"
-   "'lem-in (arg) < map.txt | ./visu-hex' - to do visualisation\n");
+			"'b' - do without superposition\n"
+			"'lem-in (arg) < map.txt | ./visu-hex' - to do visualisation\n");
 		exit(0);
 	}
 	if (ft_strstr(str, "r"))
@@ -30,10 +30,10 @@ void					lm_parce_av(char *str)
 		g_no_bahra = 1;
 }
 
-static void			lm_print_links(t_lem *lem)
+static void				lm_print_links(t_lem *lem)
 {
-	t_room *room;
-	t_lroom *link;
+	t_room	*room;
+	t_lroom	*link;
 
 	room = lem->rooms;
 	while (room)
@@ -42,7 +42,8 @@ static void			lm_print_links(t_lem *lem)
 		ft_printf("num = %i, name = %s links :\n", room->num, room->name);
 		while (link->next)
 		{
-			ft_printf("|num = %i, name = %s|\t", link->room->num, link->room->name);
+			ft_printf("|num = %i, name = %s|\t",
+					link->room->num, link->room->name);
 			link = link->next;
 		}
 		ft_printf("|num = %i, name = %s|\n", link->room->num, link->room->name);
@@ -50,12 +51,12 @@ static void			lm_print_links(t_lem *lem)
 	}
 }
 
-static void		lm_debug_print_ways(t_wroom *ways)
+static void				lm_debug_print_ways(t_wroom *ways)
 {
-	int i;
-	i = 0;
+	int		i;
 	t_lroom	*curr;
 
+	i = 0;
 	while (ways)
 	{
 		curr = ways->list;

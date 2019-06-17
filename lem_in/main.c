@@ -91,7 +91,7 @@ int				main(int ac, char **av)
 	t_lem	*lem;
 
 	lem = lm_create_lem();
-	ac != 1 ?  lm_parce_av(av[1]) : 0;
+	ac != 1 ? lm_parce_av(av[1]) : 0;
 	lm_parcer(lem);
 	lm_find_ways(lem);
 	lm_print_gnl((lem)->gnl);
